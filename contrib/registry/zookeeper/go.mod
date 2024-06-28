@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/go-zookeeper/zk v1.0.3
-	github.com/joy12825/gf/v2 v2.7.6
+	github.com/joy12825/gf/v2 v2.7.7
 	golang.org/x/sync v0.4.0
 )
 

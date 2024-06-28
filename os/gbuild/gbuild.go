@@ -9,6 +9,7 @@ package gbuild
 
 import (
 	"context"
+	"github.com/joy12825/gf/v2"
 	"runtime"
 
 	"github.com/joy12825/gf/v2/container/gvar"

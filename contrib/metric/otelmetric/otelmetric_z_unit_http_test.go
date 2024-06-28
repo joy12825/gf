@@ -8,6 +8,8 @@ package otelmetric_test
 
 import (
 	"fmt"
+	"github.com/joy12825/gf/contrib/metric/otelmetric/v2"
+	"github.com/joy12825/gf/v2"
 	"testing"
 	"time"
 

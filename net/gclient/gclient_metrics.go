@@ -7,6 +7,7 @@
 package gclient
 
 import (
+	"github.com/joy12825/gf/v2"
 	"net/http"
 
 	"github.com/joy12825/gf/v2/os/gmetric"

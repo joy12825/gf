@@ -4,13 +4,13 @@ go 1.18
 
 require (
 	github.com/gogf/selfupdate v0.0.0-20231215043001-5c48c528462f
-	github.com/joy12825/gf/contrib/drivers/clickhouse/v2 v2.7.6
-	github.com/joy12825/gf/contrib/drivers/mssql/v2 v2.7.6
-	github.com/joy12825/gf/contrib/drivers/mysql/v2 v2.7.6
-	github.com/joy12825/gf/contrib/drivers/oracle/v2 v2.7.6
-	github.com/joy12825/gf/contrib/drivers/pgsql/v2 v2.7.6
-	github.com/joy12825/gf/contrib/drivers/sqlite/v2 v2.7.6
-	github.com/joy12825/gf/v2 v2.7.6
+	github.com/joy12825/gf/contrib/drivers/clickhouse/v2 v2.7.7
+	github.com/joy12825/gf/contrib/drivers/mssql/v2 v2.7.7
+	github.com/joy12825/gf/contrib/drivers/mysql/v2 v2.7.7
+	github.com/joy12825/gf/contrib/drivers/oracle/v2 v2.7.7
+	github.com/joy12825/gf/contrib/drivers/pgsql/v2 v2.7.7
+	github.com/joy12825/gf/contrib/drivers/sqlite/v2 v2.7.7
+	github.com/joy12825/gf/v2 v2.7.7
 	github.com/olekukonko/tablewriter v0.0.5
 	golang.org/x/mod v0.17.0
 	golang.org/x/tools v0.18.0

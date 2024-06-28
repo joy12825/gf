@@ -11,6 +11,7 @@ import (
 	"bytes"
 	"context"
 	"fmt"
+	"github.com/joy12825/gf/v2"
 	"os"
 
 	"go.opentelemetry.io/otel"

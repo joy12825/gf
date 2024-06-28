@@ -3,7 +3,7 @@ module github.com/joy12825/gf/contrib/config/kubecm/v2
 go 1.18
 
 require (
-	github.com/joy12825/gf/v2 v2.7.6
+	github.com/joy12825/gf/v2 v2.7.7
 	k8s.io/api v0.27.4
 	k8s.io/apimachinery v0.27.4
 	k8s.io/client-go v0.27.4

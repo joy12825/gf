@@ -3,7 +3,7 @@ module github.com/joy12825/gf/contrib/drivers/sqlitecgo/v2
 go 1.18
 
 require (
-	github.com/joy12825/gf/v2 v2.7.6
+	github.com/joy12825/gf/v2 v2.7.7
 	github.com/mattn/go-sqlite3 v1.14.17
 )
 

@@ -9,6 +9,7 @@ package gclient
 import (
 	"context"
 	"fmt"
+	"github.com/joy12825/gf/v2"
 	"io"
 	"net/http"
 	"net/http/httptrace"

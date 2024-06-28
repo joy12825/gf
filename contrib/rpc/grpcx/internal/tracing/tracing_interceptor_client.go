@@ -8,6 +8,7 @@ package tracing
 
 import (
 	"context"
+	"github.com/joy12825/gf/v2"
 
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"

@@ -9,6 +9,7 @@ package ghttp
 import (
 	"context"
 	"fmt"
+	"github.com/joy12825/gf/v2"
 	"io"
 
 	"go.opentelemetry.io/otel"

@@ -2,7 +2,7 @@ module github.com/joy12825/gf/contrib/registry/file/v2
 
 go 1.18
 
-require github.com/joy12825/gf/v2 v2.7.6
+require github.com/joy12825/gf/v2 v2.7.7
 
 require (
 	github.com/BurntSushi/toml v1.3.2 // indirect

@@ -5,10 +5,10 @@ go 1.18
 require (
 	github.com/hashicorp/consul/api v1.24.0
 	github.com/hashicorp/go-cleanhttp v0.5.2
-	github.com/joy12825/gf/contrib/config/consul/v2 v2.7.6
-	github.com/joy12825/gf/contrib/drivers/mysql/v2 v2.7.6
-	github.com/joy12825/gf/contrib/nosql/redis/v2 v2.7.6
-	github.com/joy12825/gf/v2 v2.7.6
+	github.com/joy12825/gf/contrib/config/consul/v2 v2.7.7
+	github.com/joy12825/gf/contrib/drivers/mysql/v2 v2.7.7
+	github.com/joy12825/gf/contrib/nosql/redis/v2 v2.7.7
+	github.com/joy12825/gf/v2 v2.7.7
 	github.com/nacos-group/nacos-sdk-go/v2 v2.2.5
 	github.com/polarismesh/polaris-go v1.5.5
 	github.com/prometheus/client_golang v1.19.0
