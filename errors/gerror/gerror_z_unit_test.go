@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gerror_test
 
@@ -11,10 +11,10 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/gogf/gf/v2/errors/gcode"
-	"github.com/gogf/gf/v2/errors/gerror"
-	"github.com/gogf/gf/v2/internal/json"
-	"github.com/gogf/gf/v2/test/gtest"
+	"github.com/joy12825/gf/v2/errors/gcode"
+	"github.com/joy12825/gf/v2/errors/gerror"
+	"github.com/joy12825/gf/v2/internal/json"
+	"github.com/joy12825/gf/v2/test/gtest"
 )
 
 func nilError() error {

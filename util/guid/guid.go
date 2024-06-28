@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 // Package guid provides simple and high performance unique id generation functionality.
 package guid
@@ -12,12 +12,12 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/gogf/gf/v2/container/gtype"
-	"github.com/gogf/gf/v2/encoding/ghash"
-	"github.com/gogf/gf/v2/errors/gcode"
-	"github.com/gogf/gf/v2/errors/gerror"
-	"github.com/gogf/gf/v2/net/gipv4"
-	"github.com/gogf/gf/v2/util/grand"
+	"github.com/joy12825/gf/v2/container/gtype"
+	"github.com/joy12825/gf/v2/encoding/ghash"
+	"github.com/joy12825/gf/v2/errors/gcode"
+	"github.com/joy12825/gf/v2/errors/gerror"
+	"github.com/joy12825/gf/v2/net/gipv4"
+	"github.com/joy12825/gf/v2/util/grand"
 )
 
 const (

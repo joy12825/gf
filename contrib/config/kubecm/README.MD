@@ -9,7 +9,7 @@ glang version >= v.18
 
 # Installation
 ```
-go get -u github.com/gogf/gf/contrib/config/kubecm/v2
+go get -u github.com/joy12825/gf/contrib/config/kubecm/v2
 ```
 
 # Example
@@ -44,9 +44,9 @@ which sets the Adapter of default configuration instance before any other packag
 package boot
 
 import (
-	"github.com/gogf/gf/contrib/config/kubecm/v2"
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/os/gctx"
+	"github.com/joy12825/gf/contrib/config/kubecm/v2"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/os/gctx"
 )
 
 const (
@@ -78,9 +78,9 @@ func init() {
 package boot
 
 import (
-	"github.com/gogf/gf/contrib/config/kubecm/v2"
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/os/gctx"
+	"github.com/joy12825/gf/contrib/config/kubecm/v2"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/os/gctx"
 	"k8s.io/client-go/kubernetes"
 )
 
@@ -124,16 +124,16 @@ func init() {
 
 It is strongly recommended import your boot package in top of your `main.go`.
 
-Note the top `import`: `_ "github.com/gogf/gf/example/config/kubecm/boot_in_pod"` .
+Note the top `import`: `_ "github.com/joy12825/gf/example/config/kubecm/boot_in_pod"` .
 
 ```go
 package main
 
 import (
-	_ "github.com/gogf/gf/example/config/kubecm/boot_in_pod"
+	_ "github.com/joy12825/gf/example/config/kubecm/boot_in_pod"
 
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/os/gctx"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/os/gctx"
 )
 
 func main() {

@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package redis
 
@@ -10,10 +10,10 @@ import (
 	"context"
 	"time"
 
-	"github.com/gogf/gf/v2/container/gvar"
-	"github.com/gogf/gf/v2/database/gredis"
-	"github.com/gogf/gf/v2/os/gtime"
-	"github.com/gogf/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/container/gvar"
+	"github.com/joy12825/gf/v2/database/gredis"
+	"github.com/joy12825/gf/v2/os/gtime"
+	"github.com/joy12825/gf/v2/util/gconv"
 )
 
 // GroupGeneric provides generic functions of redis.

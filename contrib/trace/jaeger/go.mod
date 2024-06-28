@@ -1,9 +1,9 @@
-module github.com/gogf/gf/contrib/trace/jaeger/v2
+module github.com/joy12825/gf/contrib/trace/jaeger/v2
 
 go 1.18
 
 require (
-	github.com/gogf/gf/v2 v2.7.2
+	github.com/joy12825/gf/v2 v2.7.2
 	go.opentelemetry.io/otel v1.14.0
 	go.opentelemetry.io/otel/exporters/jaeger v1.14.0
 	go.opentelemetry.io/otel/sdk v1.14.0
@@ -16,4 +16,4 @@ require (
 	golang.org/x/sys v0.19.0 // indirect
 )
 
-replace github.com/gogf/gf/v2 => ../../../
+replace github.com/joy12825/gf/v2 => ../../../

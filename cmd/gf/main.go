@@ -2,15 +2,15 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package main
 
 import (
-	"github.com/gogf/gf/cmd/gf/v2/gfcmd"
-	"github.com/gogf/gf/cmd/gf/v2/internal/utility/mlog"
-	"github.com/gogf/gf/v2/errors/gerror"
-	"github.com/gogf/gf/v2/os/gctx"
+	"github.com/joy12825/gf/cmd/gf/v2/gfcmd"
+	"github.com/joy12825/gf/cmd/gf/v2/internal/utility/mlog"
+	"github.com/joy12825/gf/v2/errors/gerror"
+	"github.com/joy12825/gf/v2/os/gctx"
 )
 
 func main() {

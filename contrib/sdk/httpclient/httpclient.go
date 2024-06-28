@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 // Package httpclient provides http client used for SDK.
 package httpclient
@@ -12,15 +12,15 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/gogf/gf/v2/encoding/gurl"
-	"github.com/gogf/gf/v2/errors/gerror"
-	"github.com/gogf/gf/v2/net/gclient"
-	"github.com/gogf/gf/v2/net/ghttp"
-	"github.com/gogf/gf/v2/text/gregex"
-	"github.com/gogf/gf/v2/text/gstr"
-	"github.com/gogf/gf/v2/util/gconv"
-	"github.com/gogf/gf/v2/util/gmeta"
-	"github.com/gogf/gf/v2/util/gtag"
+	"github.com/joy12825/gf/v2/encoding/gurl"
+	"github.com/joy12825/gf/v2/errors/gerror"
+	"github.com/joy12825/gf/v2/net/gclient"
+	"github.com/joy12825/gf/v2/net/ghttp"
+	"github.com/joy12825/gf/v2/text/gregex"
+	"github.com/joy12825/gf/v2/text/gstr"
+	"github.com/joy12825/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/util/gmeta"
+	"github.com/joy12825/gf/v2/util/gtag"
 )
 
 // Client is a http client for SDK.

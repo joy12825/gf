@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 // Package sqlitecgo implements gdb.Driver, which supports operations for database SQLite.
 //
@@ -16,8 +16,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/gogf/gf/v2/database/gdb"
-	"github.com/gogf/gf/v2/util/gutil"
+	"github.com/joy12825/gf/v2/database/gdb"
+	"github.com/joy12825/gf/v2/util/gutil"
 )
 
 // TableFields retrieves and returns the fields' information of specified table of current schema.

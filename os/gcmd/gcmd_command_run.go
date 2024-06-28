@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 //
 
 package gcmd
@@ -17,16 +17,15 @@ import (
 	"go.opentelemetry.io/otel/propagation"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/gogf/gf/v2"
-	"github.com/gogf/gf/v2/errors/gcode"
-	"github.com/gogf/gf/v2/errors/gerror"
-	"github.com/gogf/gf/v2/net/gtrace"
-	"github.com/gogf/gf/v2/os/gcfg"
-	"github.com/gogf/gf/v2/os/genv"
-	"github.com/gogf/gf/v2/os/glog"
-	"github.com/gogf/gf/v2/text/gstr"
-	"github.com/gogf/gf/v2/util/gconv"
-	"github.com/gogf/gf/v2/util/gutil"
+	"github.com/joy12825/gf/v2/errors/gcode"
+	"github.com/joy12825/gf/v2/errors/gerror"
+	"github.com/joy12825/gf/v2/net/gtrace"
+	"github.com/joy12825/gf/v2/os/gcfg"
+	"github.com/joy12825/gf/v2/os/genv"
+	"github.com/joy12825/gf/v2/os/glog"
+	"github.com/joy12825/gf/v2/text/gstr"
+	"github.com/joy12825/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/util/gutil"
 )
 
 // Run calls custom function in os.Args that bound to this command.

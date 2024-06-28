@@ -2,15 +2,15 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package sqlite
 
 import (
 	"context"
 
-	"github.com/gogf/gf/v2/database/gdb"
-	"github.com/gogf/gf/v2/text/gstr"
+	"github.com/joy12825/gf/v2/database/gdb"
+	"github.com/joy12825/gf/v2/text/gstr"
 )
 
 // DoFilter deals with the sql string before commits it to underlying sql driver.

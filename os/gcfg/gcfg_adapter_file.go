@@ -2,25 +2,25 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gcfg
 
 import (
 	"context"
 
-	"github.com/gogf/gf/v2/container/garray"
-	"github.com/gogf/gf/v2/container/gmap"
-	"github.com/gogf/gf/v2/container/gvar"
-	"github.com/gogf/gf/v2/encoding/gjson"
-	"github.com/gogf/gf/v2/errors/gerror"
-	"github.com/gogf/gf/v2/internal/command"
-	"github.com/gogf/gf/v2/internal/intlog"
-	"github.com/gogf/gf/v2/os/gfile"
-	"github.com/gogf/gf/v2/os/gfsnotify"
-	"github.com/gogf/gf/v2/os/gres"
-	"github.com/gogf/gf/v2/util/gmode"
-	"github.com/gogf/gf/v2/util/gutil"
+	"github.com/joy12825/gf/v2/container/garray"
+	"github.com/joy12825/gf/v2/container/gmap"
+	"github.com/joy12825/gf/v2/container/gvar"
+	"github.com/joy12825/gf/v2/encoding/gjson"
+	"github.com/joy12825/gf/v2/errors/gerror"
+	"github.com/joy12825/gf/v2/internal/command"
+	"github.com/joy12825/gf/v2/internal/intlog"
+	"github.com/joy12825/gf/v2/os/gfile"
+	"github.com/joy12825/gf/v2/os/gfsnotify"
+	"github.com/joy12825/gf/v2/os/gres"
+	"github.com/joy12825/gf/v2/util/gmode"
+	"github.com/joy12825/gf/v2/util/gutil"
 )
 
 // AdapterFile implements interface Adapter using file.

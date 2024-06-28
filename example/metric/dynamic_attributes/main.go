@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package main
 
@@ -11,15 +11,14 @@ import (
 
 	"go.opentelemetry.io/otel/exporters/prometheus"
 
-	"github.com/gogf/gf/contrib/metric/otelmetric/v2"
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/os/gctx"
-	"github.com/gogf/gf/v2/os/gmetric"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/os/gctx"
+	"github.com/joy12825/gf/v2/os/gmetric"
 )
 
 var (
 	meter = gmetric.GetGlobalProvider().Meter(gmetric.MeterOption{
-		Instrument:        "github.com/gogf/gf/example/metric/basic",
+		Instrument:        "github.com/joy12825/gf/example/metric/basic",
 		InstrumentVersion: "v1.0",
 	})
 	counter = meter.MustCounter(

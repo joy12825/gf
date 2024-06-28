@@ -7,7 +7,7 @@ package dict
 import (
 	"context"
 
-	"github.com/gogf/gf/cmd/gf/v2/internal/cmd/testdata/genctrl-merge/add_new_file/api/dict/v1"
+	"github.com/joy12825/gf/cmd/gf/v2/internal/cmd/testdata/genctrl-merge/add_new_file/api/dict/v1"
 )
 
 type IDictV1 interface {

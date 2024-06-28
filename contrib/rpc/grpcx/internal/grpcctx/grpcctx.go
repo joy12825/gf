@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 // Package grpcctx provides context feature for GRPC.
 package grpcctx
@@ -12,9 +12,9 @@ import (
 
 	"google.golang.org/grpc/metadata"
 
-	"github.com/gogf/gf/v2/container/gmap"
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/container/gmap"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/util/gconv"
 )
 
 type (

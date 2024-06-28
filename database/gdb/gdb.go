@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 // Package gdb provides ORM features for popular relationship databases.
 //
@@ -14,18 +14,18 @@ import (
 	"database/sql"
 	"time"
 
-	"github.com/gogf/gf/v2/container/garray"
-	"github.com/gogf/gf/v2/container/gmap"
-	"github.com/gogf/gf/v2/container/gtype"
-	"github.com/gogf/gf/v2/container/gvar"
-	"github.com/gogf/gf/v2/errors/gcode"
-	"github.com/gogf/gf/v2/errors/gerror"
-	"github.com/gogf/gf/v2/os/gcache"
-	"github.com/gogf/gf/v2/os/gcmd"
-	"github.com/gogf/gf/v2/os/gctx"
-	"github.com/gogf/gf/v2/os/glog"
-	"github.com/gogf/gf/v2/util/grand"
-	"github.com/gogf/gf/v2/util/gutil"
+	"github.com/joy12825/gf/v2/container/garray"
+	"github.com/joy12825/gf/v2/container/gmap"
+	"github.com/joy12825/gf/v2/container/gtype"
+	"github.com/joy12825/gf/v2/container/gvar"
+	"github.com/joy12825/gf/v2/errors/gcode"
+	"github.com/joy12825/gf/v2/errors/gerror"
+	"github.com/joy12825/gf/v2/os/gcache"
+	"github.com/joy12825/gf/v2/os/gcmd"
+	"github.com/joy12825/gf/v2/os/gctx"
+	"github.com/joy12825/gf/v2/os/glog"
+	"github.com/joy12825/gf/v2/util/grand"
+	"github.com/joy12825/gf/v2/util/gutil"
 )
 
 // DB defines the interfaces for ORM operations.
@@ -606,7 +606,7 @@ func newDBByConfigNode(node *ConfigNode, group string) (db DB, err error) {
 	}
 	errorMsg := `cannot find database driver for specified database type "%s"`
 	errorMsg += `, did you misspell type name "%s" or forget importing the database driver? `
-	errorMsg += `possible reference: https://github.com/gogf/gf/tree/master/contrib/drivers`
+	errorMsg += `possible reference: https://github.com/joy12825/gf/tree/master/contrib/drivers`
 	return nil, gerror.NewCodef(gcode.CodeInvalidConfiguration, errorMsg, node.Type, node.Type)
 }
 

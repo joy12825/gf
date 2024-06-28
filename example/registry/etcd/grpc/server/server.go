@@ -2,14 +2,12 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package main
 
 import (
-	"github.com/gogf/gf/contrib/registry/etcd/v2"
-	"github.com/gogf/gf/contrib/rpc/grpcx/v2"
-	"github.com/gogf/gf/example/registry/etcd/grpc/controller"
+	"github.com/joy12825/gf/example/registry/etcd/grpc/controller"
 )
 
 func main() {

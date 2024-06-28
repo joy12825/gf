@@ -3,13 +3,13 @@
 ## Installation
 
 ```
-go get -u -v github.com/gogf/gf/contrib/metric/otelmetric/v2
+go get -u -v github.com/joy12825/gf/contrib/metric/otelmetric/v2
 ```
 
 suggested using `go.mod`:
 
 ```
-require github.com/gogf/gf/contrib/metric/otelmetric/v2 latest
+require github.com/joy12825/gf/contrib/metric/otelmetric/v2 latest
 ```
 
 ## Example
@@ -26,16 +26,16 @@ import (
 	"go.opentelemetry.io/otel/exporters/prometheus"
 	"go.opentelemetry.io/otel/sdk/metric"
 
-	"github.com/gogf/gf/contrib/metric/otelmetric/v2"
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/net/ghttp"
-	"github.com/gogf/gf/v2/os/gctx"
-	"github.com/gogf/gf/v2/os/gmetric"
+	"github.com/joy12825/gf/contrib/metric/otelmetric/v2"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/net/ghttp"
+	"github.com/joy12825/gf/v2/os/gctx"
+	"github.com/joy12825/gf/v2/os/gmetric"
 )
 
 var (
 	meter = gmetric.GetGlobalProvider().Meter(gmetric.MeterOption{
-		Instrument:        "github.com/gogf/gf/example/metric/basic",
+		Instrument:        "github.com/joy12825/gf/example/metric/basic",
 		InstrumentVersion: "v1.0",
 	})
 	counter = meter.MustCounter(

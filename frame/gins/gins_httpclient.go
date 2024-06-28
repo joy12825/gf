@@ -2,15 +2,15 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gins
 
 import (
 	"fmt"
 
-	"github.com/gogf/gf/v2/internal/instance"
-	"github.com/gogf/gf/v2/net/gclient"
+	"github.com/joy12825/gf/v2/internal/instance"
+	"github.com/joy12825/gf/v2/net/gclient"
 )
 
 // HttpClient returns an instance of http client with specified name.

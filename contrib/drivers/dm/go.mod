@@ -1,12 +1,12 @@
-module github.com/gogf/gf/contrib/drivers/dm/v2
+module github.com/joy12825/gf/contrib/drivers/dm/v2
 
 go 1.18
 
-replace github.com/gogf/gf/v2 => ../../../
+replace github.com/joy12825/gf/v2 => ../../../
 
 require (
 	gitee.com/chunanyong/dm v1.8.12
-	github.com/gogf/gf/v2 v2.7.2
+	github.com/joy12825/gf/v2 v2.7.2
 )
 
 require (

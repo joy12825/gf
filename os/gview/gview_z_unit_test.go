@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gview_test
 
@@ -14,18 +14,18 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gogf/gf/v2/encoding/ghtml"
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/os/gctx"
-	"github.com/gogf/gf/v2/os/gfile"
-	"github.com/gogf/gf/v2/os/gres"
-	"github.com/gogf/gf/v2/os/gtime"
-	"github.com/gogf/gf/v2/os/gview"
-	"github.com/gogf/gf/v2/test/gtest"
-	"github.com/gogf/gf/v2/text/gstr"
-	"github.com/gogf/gf/v2/util/gconv"
-	"github.com/gogf/gf/v2/util/gmode"
-	"github.com/gogf/gf/v2/util/guid"
+	"github.com/joy12825/gf/v2/encoding/ghtml"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/os/gctx"
+	"github.com/joy12825/gf/v2/os/gfile"
+	"github.com/joy12825/gf/v2/os/gres"
+	"github.com/joy12825/gf/v2/os/gtime"
+	"github.com/joy12825/gf/v2/os/gview"
+	"github.com/joy12825/gf/v2/test/gtest"
+	"github.com/joy12825/gf/v2/text/gstr"
+	"github.com/joy12825/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/util/gmode"
+	"github.com/joy12825/gf/v2/util/guid"
 )
 
 func init() {

@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gcron
 
@@ -13,12 +13,12 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/gogf/gf/v2/container/gtype"
-	"github.com/gogf/gf/v2/errors/gcode"
-	"github.com/gogf/gf/v2/errors/gerror"
-	"github.com/gogf/gf/v2/os/glog"
-	"github.com/gogf/gf/v2/os/gtimer"
-	"github.com/gogf/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/container/gtype"
+	"github.com/joy12825/gf/v2/errors/gcode"
+	"github.com/joy12825/gf/v2/errors/gerror"
+	"github.com/joy12825/gf/v2/os/glog"
+	"github.com/joy12825/gf/v2/os/gtimer"
+	"github.com/joy12825/gf/v2/util/gconv"
 )
 
 // JobFunc is the timing called job function in cron.

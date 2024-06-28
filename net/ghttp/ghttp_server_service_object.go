@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package ghttp
 
@@ -12,9 +12,9 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/gogf/gf/v2/os/gfile"
-	"github.com/gogf/gf/v2/text/gregex"
-	"github.com/gogf/gf/v2/text/gstr"
+	"github.com/joy12825/gf/v2/os/gfile"
+	"github.com/joy12825/gf/v2/text/gregex"
+	"github.com/joy12825/gf/v2/text/gstr"
 )
 
 // BindObject registers object to server routes with a given pattern.
@@ -89,7 +89,7 @@ func (s *Server) doBindObject(ctx context.Context, in doBindObjectInput) {
 		return
 	}
 	if gstr.Equal(method, defaultMethod) {
-		in.Pattern = s.serveHandlerKey("", path, domain,actionGroup)
+		in.Pattern = s.serveHandlerKey("", path, domain, actionGroup)
 	}
 	var (
 		handlerMap   = make(map[string]*HandlerItem)

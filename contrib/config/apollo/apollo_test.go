@@ -1,20 +1,18 @@
-// Copyright 2019 gf Author(https://github.com/gogf/gf). All Rights Reserved.
+// Copyright 2019 gf Author(https://github.com/joy12825/gf). All Rights Reserved.
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package apollo_test
 
 import (
 	"testing"
 
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/os/gctx"
-	"github.com/gogf/gf/v2/test/gtest"
-	"github.com/gogf/gf/v2/util/guid"
-
-	"github.com/gogf/gf/contrib/config/apollo/v2"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/os/gctx"
+	"github.com/joy12825/gf/v2/test/gtest"
+	"github.com/joy12825/gf/v2/util/guid"
 )
 
 var (

@@ -2,24 +2,24 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package article
 
 // import (
 //	"context"
 //
-//	"github.com/gogf/gf/cmd/gf/v2/internal/cmd/testdata/genservice/service"
+//	"github.com/joy12825/gf/cmd/gf/v2/internal/cmd/testdata/genservice/service"
 // )
 import (
 	"context"
 
 	// This is a random comment
-	gdbas "github.com/gogf/gf/v2/database/gdb"
+	gdbas "github.com/joy12825/gf/v2/database/gdb"
 	/**
 	 *
 	 */
-	_ "github.com/gogf/gf/v2/os/gfile"
+	_ "github.com/joy12825/gf/v2/os/gfile"
 )
 
 // T1 random comment
@@ -53,7 +53,7 @@ func (s *sArticle) T3(ctx context.Context, b *gdbas.Model) (c, d *gdbas.Model, e
 	/* import (
 	*	"context"
 	*
-	*	"github.com/gogf/gf/cmd/gf/v2/internal/cmd/testdata/genservice/service"
+	*	"github.com/joy12825/gf/cmd/gf/v2/internal/cmd/testdata/genservice/service"
 	 */
 	return nil, nil, nil
 }

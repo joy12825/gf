@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gtrace
 
@@ -10,9 +10,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/gogf/gf/v2/encoding/gcompress"
+	"github.com/joy12825/gf/v2/encoding/gcompress"
 
-	"github.com/gogf/gf/v2/text/gstr"
+	"github.com/joy12825/gf/v2/text/gstr"
 )
 
 // SafeContentForHttp cuts and returns given content by `MaxContentLogSize`.

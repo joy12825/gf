@@ -1,10 +1,10 @@
-module github.com/gogf/gf/contrib/drivers/sqlite/v2
+module github.com/joy12825/gf/contrib/drivers/sqlite/v2
 
 go 1.18
 
 require (
 	github.com/glebarez/go-sqlite v1.21.2
-	github.com/gogf/gf/v2 v2.7.2
+	github.com/joy12825/gf/v2 v2.7.2
 )
 
 require (
@@ -39,4 +39,4 @@ require (
 	modernc.org/sqlite v1.23.1 // indirect
 )
 
-replace github.com/gogf/gf/v2 => ../../../
+replace github.com/joy12825/gf/v2 => ../../../

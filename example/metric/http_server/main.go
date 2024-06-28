@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package main
 
@@ -11,10 +11,9 @@ import (
 
 	"go.opentelemetry.io/otel/exporters/prometheus"
 
-	"github.com/gogf/gf/contrib/metric/otelmetric/v2"
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/net/ghttp"
-	"github.com/gogf/gf/v2/os/gctx"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/net/ghttp"
+	"github.com/joy12825/gf/v2/os/gctx"
 )
 
 func main() {

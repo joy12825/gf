@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package cmd
 
@@ -12,16 +12,16 @@ import (
 	"os"
 	"strings"
 
-	"github.com/gogf/gf/cmd/gf/v2/internal/utility/allyes"
-	"github.com/gogf/gf/cmd/gf/v2/internal/utility/mlog"
-	"github.com/gogf/gf/cmd/gf/v2/internal/utility/utils"
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/os/gcmd"
-	"github.com/gogf/gf/v2/os/gfile"
-	"github.com/gogf/gf/v2/os/gproc"
-	"github.com/gogf/gf/v2/os/gres"
-	"github.com/gogf/gf/v2/text/gstr"
-	"github.com/gogf/gf/v2/util/gtag"
+	"github.com/joy12825/gf/cmd/gf/v2/internal/utility/allyes"
+	"github.com/joy12825/gf/cmd/gf/v2/internal/utility/mlog"
+	"github.com/joy12825/gf/cmd/gf/v2/internal/utility/utils"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/os/gcmd"
+	"github.com/joy12825/gf/v2/os/gfile"
+	"github.com/joy12825/gf/v2/os/gproc"
+	"github.com/joy12825/gf/v2/os/gres"
+	"github.com/joy12825/gf/v2/text/gstr"
+	"github.com/joy12825/gf/v2/util/gtag"
 )
 
 var (
@@ -34,7 +34,7 @@ type cInit struct {
 }
 
 const (
-	cInitRepoPrefix  = `github.com/gogf/`
+	cInitRepoPrefix  = `github.com/joy12825/`
 	cInitMonoRepo    = `template-mono`
 	cInitMonoRepoApp = `template-mono-app`
 	cInitSingleRepo  = `template-single`
@@ -151,8 +151,8 @@ func (c cInit) Index(ctx context.Context, in cInitInput) (out *cInitOutput, err 
 	// Update the GoFrame version.
 	if in.Update {
 		mlog.Print("update goframe...")
-		// go get -u github.com/gogf/gf/v2@latest
-		updateCommand := `go get -u github.com/gogf/gf/v2@latest`
+		// go get -u github.com/joy12825/gf/v2@latest
+		updateCommand := `go get -u github.com/joy12825/gf/v2@latest`
 		if in.Name != "." {
 			updateCommand = fmt.Sprintf(`cd %s && %s`, in.Name, updateCommand)
 		}

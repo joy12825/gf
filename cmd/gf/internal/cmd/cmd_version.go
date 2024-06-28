@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package cmd
 
@@ -10,20 +10,20 @@ import (
 	"bytes"
 	"context"
 	"fmt"
+	"github.com/joy12825/gf/v2"
 	"runtime"
 	"strings"
 	"time"
 
-	"github.com/gogf/gf/v2"
-	"github.com/gogf/gf/v2/errors/gerror"
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/os/gbuild"
-	"github.com/gogf/gf/v2/os/gfile"
-	"github.com/gogf/gf/v2/os/gproc"
-	"github.com/gogf/gf/v2/text/gregex"
-	"github.com/gogf/gf/v2/text/gstr"
+	"github.com/joy12825/gf/v2/errors/gerror"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/os/gbuild"
+	"github.com/joy12825/gf/v2/os/gfile"
+	"github.com/joy12825/gf/v2/os/gproc"
+	"github.com/joy12825/gf/v2/text/gregex"
+	"github.com/joy12825/gf/v2/text/gstr"
 
-	"github.com/gogf/gf/cmd/gf/v2/internal/utility/mlog"
+	"github.com/joy12825/gf/cmd/gf/v2/internal/utility/mlog"
 )
 
 var (
@@ -111,7 +111,7 @@ func getGoFrameVersion(indentLevel int) (gfVersion string) {
 	}
 	pkgList := gstr.Split(pkgInfo, "\n")
 	for _, v := range pkgList {
-		if strings.HasPrefix(v, "github.com/gogf/gf") {
+		if strings.HasPrefix(v, "github.com/joy12825/gf") {
 			gfVersion += fmt.Sprintf("\n%s%s", strings.Repeat(defaultIndent, indentLevel), v)
 		}
 	}
@@ -139,13 +139,13 @@ func (c cVersion) getGFVersionOfCurrentProject() (string, error) {
 			line = gstr.TrimLeftStr(line, "require ")
 			line = gstr.Trim(line)
 			// Version 1.
-			match, err := gregex.MatchString(`^github\.com/gogf/gf\s+(.+)$`, line)
+			match, err := gregex.MatchString(`^github\.com/joy12825/gf\s+(.+)$`, line)
 			if err != nil {
 				return "", err
 			}
 			if len(match) <= 1 {
 				// Version > 1.
-				match, err = gregex.MatchString(`^github\.com/gogf/gf/v\d\s+(.+)$`, line)
+				match, err = gregex.MatchString(`^github\.com/joy12825/gf/v\d\s+(.+)$`, line)
 				if err != nil {
 					return "", err
 				}

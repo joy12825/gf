@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package garray
 
@@ -12,12 +12,12 @@ import (
 	"math"
 	"sort"
 
-	"github.com/gogf/gf/v2/errors/gcode"
-	"github.com/gogf/gf/v2/errors/gerror"
-	"github.com/gogf/gf/v2/internal/json"
-	"github.com/gogf/gf/v2/internal/rwmutex"
-	"github.com/gogf/gf/v2/util/gconv"
-	"github.com/gogf/gf/v2/util/grand"
+	"github.com/joy12825/gf/v2/errors/gcode"
+	"github.com/joy12825/gf/v2/errors/gerror"
+	"github.com/joy12825/gf/v2/internal/json"
+	"github.com/joy12825/gf/v2/internal/rwmutex"
+	"github.com/joy12825/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/util/grand"
 )
 
 // IntArray is a golang int array with rich features.

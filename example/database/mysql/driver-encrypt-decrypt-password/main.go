@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 //
 
 package main
@@ -12,10 +12,9 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/gogf/gf/contrib/drivers/mysql/v2"
-	"github.com/gogf/gf/v2/database/gdb"
-	"github.com/gogf/gf/v2/encoding/gbase64"
-	"github.com/gogf/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/database/gdb"
+	"github.com/joy12825/gf/v2/encoding/gbase64"
+	"github.com/joy12825/gf/v2/frame/g"
 )
 
 const (

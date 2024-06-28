@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gview
 
@@ -13,14 +13,14 @@ import (
 	htmltpl "html/template"
 	"strings"
 
-	"github.com/gogf/gf/v2/encoding/ghtml"
-	"github.com/gogf/gf/v2/encoding/gjson"
-	"github.com/gogf/gf/v2/encoding/gurl"
-	"github.com/gogf/gf/v2/os/gtime"
-	"github.com/gogf/gf/v2/text/gstr"
-	"github.com/gogf/gf/v2/util/gconv"
-	"github.com/gogf/gf/v2/util/gmode"
-	"github.com/gogf/gf/v2/util/gutil"
+	"github.com/joy12825/gf/v2/encoding/ghtml"
+	"github.com/joy12825/gf/v2/encoding/gjson"
+	"github.com/joy12825/gf/v2/encoding/gurl"
+	"github.com/joy12825/gf/v2/os/gtime"
+	"github.com/joy12825/gf/v2/text/gstr"
+	"github.com/joy12825/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/util/gmode"
+	"github.com/joy12825/gf/v2/util/gutil"
 )
 
 // buildInFuncDump implements build-in template function: dump

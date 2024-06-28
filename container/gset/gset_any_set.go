@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 // Package gset provides kinds of concurrent-safe/unsafe sets.
 package gset
@@ -10,10 +10,10 @@ package gset
 import (
 	"bytes"
 
-	"github.com/gogf/gf/v2/internal/json"
-	"github.com/gogf/gf/v2/internal/rwmutex"
-	"github.com/gogf/gf/v2/text/gstr"
-	"github.com/gogf/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/internal/json"
+	"github.com/joy12825/gf/v2/internal/rwmutex"
+	"github.com/joy12825/gf/v2/text/gstr"
+	"github.com/joy12825/gf/v2/util/gconv"
 )
 
 // Set is consisted of interface{} items.

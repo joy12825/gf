@@ -2,18 +2,18 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with gm file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 //
 
 package gmap
 
 import (
-	"github.com/gogf/gf/v2/container/gvar"
-	"github.com/gogf/gf/v2/internal/deepcopy"
-	"github.com/gogf/gf/v2/internal/empty"
-	"github.com/gogf/gf/v2/internal/json"
-	"github.com/gogf/gf/v2/internal/rwmutex"
-	"github.com/gogf/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/container/gvar"
+	"github.com/joy12825/gf/v2/internal/deepcopy"
+	"github.com/joy12825/gf/v2/internal/empty"
+	"github.com/joy12825/gf/v2/internal/json"
+	"github.com/joy12825/gf/v2/internal/rwmutex"
+	"github.com/joy12825/gf/v2/util/gconv"
 	"reflect"
 )
 

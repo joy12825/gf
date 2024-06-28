@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gvalid
 
@@ -12,9 +12,9 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/gogf/gf/v2/errors/gcode"
-	"github.com/gogf/gf/v2/internal/reflection"
-	"github.com/gogf/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/errors/gcode"
+	"github.com/joy12825/gf/v2/internal/reflection"
+	"github.com/joy12825/gf/v2/util/gconv"
 )
 
 func (v *Validator) doCheckMap(ctx context.Context, params interface{}) Error {

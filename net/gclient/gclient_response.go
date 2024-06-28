@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gclient
 
@@ -11,7 +11,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/gogf/gf/v2/internal/intlog"
+	"github.com/joy12825/gf/v2/internal/intlog"
 )
 
 // Response is the struct for client request response.

@@ -1,9 +1,9 @@
-module github.com/gogf/gf/contrib/registry/polaris/v2
+module github.com/joy12825/gf/contrib/registry/polaris/v2
 
 go 1.18
 
 require (
-	github.com/gogf/gf/v2 v2.7.2
+	github.com/joy12825/gf/v2 v2.7.2
 	github.com/polarismesh/polaris-go v1.5.5
 )
 
@@ -57,4 +57,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/gogf/gf/v2 => ../../../
+replace github.com/joy12825/gf/v2 => ../../../

@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package otelmetric_test
 
@@ -13,12 +13,11 @@ import (
 	"go.opentelemetry.io/otel/sdk/metric"
 	"go.opentelemetry.io/otel/sdk/metric/metricdata"
 
-	"github.com/gogf/gf/contrib/metric/otelmetric/v2"
-	"github.com/gogf/gf/v2/encoding/gjson"
-	"github.com/gogf/gf/v2/os/gctx"
-	"github.com/gogf/gf/v2/os/gmetric"
-	"github.com/gogf/gf/v2/test/gtest"
-	"github.com/gogf/gf/v2/text/gstr"
+	"github.com/joy12825/gf/v2/encoding/gjson"
+	"github.com/joy12825/gf/v2/os/gctx"
+	"github.com/joy12825/gf/v2/os/gmetric"
+	"github.com/joy12825/gf/v2/test/gtest"
+	"github.com/joy12825/gf/v2/text/gstr"
 )
 
 func Test_Basic(t *testing.T) {
@@ -26,19 +25,19 @@ func Test_Basic(t *testing.T) {
 		var (
 			ctx      = gctx.New()
 			meterV11 = gmetric.GetGlobalProvider().Meter(gmetric.MeterOption{
-				Instrument:        "github.com/gogf/gf/example/metric/basic",
+				Instrument:        "github.com/joy12825/gf/example/metric/basic",
 				InstrumentVersion: "v1.1",
 			})
 			meterV12 = gmetric.GetGlobalProvider().Meter(gmetric.MeterOption{
-				Instrument:        "github.com/gogf/gf/example/metric/basic",
+				Instrument:        "github.com/joy12825/gf/example/metric/basic",
 				InstrumentVersion: "v1.2",
 			})
 			meterV13 = gmetric.GetGlobalProvider().Meter(gmetric.MeterOption{
-				Instrument:        "github.com/gogf/gf/example/metric/basic",
+				Instrument:        "github.com/joy12825/gf/example/metric/basic",
 				InstrumentVersion: "v1.3",
 			})
 			meterV14 = gmetric.GetGlobalProvider().Meter(gmetric.MeterOption{
-				Instrument:        "github.com/gogf/gf/example/metric/basic",
+				Instrument:        "github.com/joy12825/gf/example/metric/basic",
 				InstrumentVersion: "v1.4",
 			})
 			counter = meterV11.MustCounter(
@@ -184,14 +183,14 @@ func Test_GlobalAttributes(t *testing.T) {
 	gmetric.SetGlobalAttributes(gmetric.Attributes{
 		gmetric.NewAttribute("g1", 1),
 	}, gmetric.SetGlobalAttributesOption{
-		Instrument:        "github.com/gogf/gf/example/metric/basic",
+		Instrument:        "github.com/joy12825/gf/example/metric/basic",
 		InstrumentVersion: "v1.1",
 		InstrumentPattern: "",
 	})
 	gmetric.SetGlobalAttributes(gmetric.Attributes{
 		gmetric.NewAttribute("g2", 2),
 	}, gmetric.SetGlobalAttributesOption{
-		Instrument:        "github.com/gogf/gf/example/metric/basic",
+		Instrument:        "github.com/joy12825/gf/example/metric/basic",
 		InstrumentVersion: "v1.3",
 		InstrumentPattern: "",
 	})
@@ -199,15 +198,15 @@ func Test_GlobalAttributes(t *testing.T) {
 		var (
 			ctx      = gctx.New()
 			meterV11 = gmetric.GetGlobalProvider().Meter(gmetric.MeterOption{
-				Instrument:        "github.com/gogf/gf/example/metric/basic",
+				Instrument:        "github.com/joy12825/gf/example/metric/basic",
 				InstrumentVersion: "v1.1",
 			})
 			meterV12 = gmetric.GetGlobalProvider().Meter(gmetric.MeterOption{
-				Instrument:        "github.com/gogf/gf/example/metric/basic",
+				Instrument:        "github.com/joy12825/gf/example/metric/basic",
 				InstrumentVersion: "v1.2",
 			})
 			meterV13 = gmetric.GetGlobalProvider().Meter(gmetric.MeterOption{
-				Instrument:        "github.com/gogf/gf/example/metric/basic",
+				Instrument:        "github.com/joy12825/gf/example/metric/basic",
 				InstrumentVersion: "v1.3",
 			})
 			counter = meterV11.MustCounter(

@@ -1,9 +1,9 @@
-module github.com/gogf/gf/contrib/registry/nacos/v2
+module github.com/joy12825/gf/contrib/registry/nacos/v2
 
 go 1.18
 
 require (
-	github.com/gogf/gf/v2 v2.7.2
+	github.com/joy12825/gf/v2 v2.7.2
 	github.com/joy999/nacos-sdk-go v0.0.0-20231120071639-10a34b3e7288
 )
 
@@ -64,4 +64,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/gogf/gf/v2 => ../../../
+replace github.com/joy12825/gf/v2 => ../../../

@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package cmd
 
@@ -11,15 +11,15 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/gogf/gf/cmd/gf/v2/internal/cmd/gendao"
-	"github.com/gogf/gf/v2/database/gdb"
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/os/gcfg"
-	"github.com/gogf/gf/v2/os/gfile"
-	"github.com/gogf/gf/v2/test/gtest"
-	"github.com/gogf/gf/v2/text/gstr"
-	"github.com/gogf/gf/v2/util/guid"
-	"github.com/gogf/gf/v2/util/gutil"
+	"github.com/joy12825/gf/cmd/gf/v2/internal/cmd/gendao"
+	"github.com/joy12825/gf/v2/database/gdb"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/os/gcfg"
+	"github.com/joy12825/gf/v2/os/gfile"
+	"github.com/joy12825/gf/v2/test/gtest"
+	"github.com/joy12825/gf/v2/text/gstr"
+	"github.com/joy12825/gf/v2/util/guid"
+	"github.com/joy12825/gf/v2/util/gutil"
 )
 
 func Test_Gen_Dao_Default(t *testing.T) {
@@ -331,7 +331,7 @@ func execSqlFile(db gdb.DB, filePath string, args ...any) error {
 	return nil
 }
 
-// https://github.com/gogf/gf/issues/2572
+// https://github.com/joy12825/gf/issues/2572
 func Test_Gen_Dao_Issue2572(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		var (
@@ -420,7 +420,7 @@ func Test_Gen_Dao_Issue2572(t *testing.T) {
 	})
 }
 
-// https://github.com/gogf/gf/issues/2616
+// https://github.com/joy12825/gf/issues/2616
 func Test_Gen_Dao_Issue2616(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		var (
@@ -520,7 +520,7 @@ func Test_Gen_Dao_Issue2616(t *testing.T) {
 	})
 }
 
-// https://github.com/gogf/gf/issues/2746
+// https://github.com/joy12825/gf/issues/2746
 func Test_Gen_Dao_Issue2746(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		var (
@@ -596,7 +596,7 @@ func Test_Gen_Dao_Issue2746(t *testing.T) {
 	})
 }
 
-// https://github.com/gogf/gf/issues/3459
+// https://github.com/joy12825/gf/issues/3459
 func Test_Gen_Dao_Issue3459(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		var (

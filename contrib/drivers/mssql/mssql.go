@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 // Package mssql implements gdb.Driver, which supports operations for database MSSql.
 //
@@ -14,7 +14,7 @@ package mssql
 import (
 	_ "github.com/microsoft/go-mssqldb"
 
-	"github.com/gogf/gf/v2/database/gdb"
+	"github.com/joy12825/gf/v2/database/gdb"
 )
 
 // Driver is the driver for SQL server database.

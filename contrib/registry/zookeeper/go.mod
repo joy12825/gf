@@ -1,10 +1,10 @@
-module github.com/gogf/gf/contrib/registry/zookeeper/v2
+module github.com/joy12825/gf/contrib/registry/zookeeper/v2
 
 go 1.18
 
 require (
 	github.com/go-zookeeper/zk v1.0.3
-	github.com/gogf/gf/v2 v2.7.2
+	github.com/joy12825/gf/v2 v2.7.2
 	golang.org/x/sync v0.4.0
 )
 
@@ -33,4 +33,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/gogf/gf/v2 => ../../../
+replace github.com/joy12825/gf/v2 => ../../../

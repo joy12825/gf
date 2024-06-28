@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package cmd
 
@@ -10,11 +10,11 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/gogf/gf/cmd/gf/v2/internal/cmd/genctrl"
-	"github.com/gogf/gf/v2/os/gfile"
-	"github.com/gogf/gf/v2/test/gtest"
-	"github.com/gogf/gf/v2/util/guid"
-	"github.com/gogf/gf/v2/util/gutil"
+	"github.com/joy12825/gf/cmd/gf/v2/internal/cmd/genctrl"
+	"github.com/joy12825/gf/v2/os/gfile"
+	"github.com/joy12825/gf/v2/test/gtest"
+	"github.com/joy12825/gf/v2/util/guid"
+	"github.com/joy12825/gf/v2/util/gutil"
 )
 
 func Test_Gen_Ctrl_Default(t *testing.T) {
@@ -107,7 +107,7 @@ func Test_Gen_Ctrl_UseMerge_AddNewFile(t *testing.T) {
 		)
 		const testNewApiFile = `
 package v1
-import "github.com/gogf/gf/v2/frame/g"
+import "github.com/joy12825/gf/v2/frame/g"
 type DictTypeAddReq struct {
 	g.Meta
 }
@@ -256,7 +256,7 @@ type DictTypeAddRes struct {
 
 }
 
-// https://github.com/gogf/gf/issues/3460
+// https://github.com/joy12825/gf/issues/3460
 func Test_Gen_Ctrl_UseMerge_Issue3460(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		var (

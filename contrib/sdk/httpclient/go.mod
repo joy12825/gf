@@ -1,8 +1,8 @@
-module github.com/gogf/gf/contrib/sdk/httpclient/v2
+module github.com/joy12825/gf/contrib/sdk/httpclient/v2
 
 go 1.18
 
-require github.com/gogf/gf/v2 v2.7.2
+require github.com/joy12825/gf/v2 v2.7.2
 
 require (
 	github.com/BurntSushi/toml v1.3.2 // indirect
@@ -29,4 +29,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/gogf/gf/v2 => ../../../
+replace github.com/joy12825/gf/v2 => ../../../

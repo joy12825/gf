@@ -2,15 +2,15 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gstr
 
 import (
 	"strings"
 
-	"github.com/gogf/gf/v2/internal/utils"
-	"github.com/gogf/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/internal/utils"
+	"github.com/joy12825/gf/v2/util/gconv"
 )
 
 // Split splits string `str` by a string `delimiter`, to an array.

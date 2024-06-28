@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package article
 
@@ -11,8 +11,8 @@ import (
 	"go/ast"
 	t "time"
 
-	"github.com/gogf/gf/cmd/gf/v2/internal/cmd/testdata/genservice/service"
-	gdbalias "github.com/gogf/gf/v2/database/gdb"
+	"github.com/joy12825/gf/cmd/gf/v2/internal/cmd/testdata/genservice/service"
+	gdbalias "github.com/joy12825/gf/v2/database/gdb"
 )
 
 type sArticle struct {

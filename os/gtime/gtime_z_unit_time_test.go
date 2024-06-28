@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gtime_test
 
@@ -11,10 +11,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gogf/gf/v2/internal/json"
-	"github.com/gogf/gf/v2/os/gtime"
-	"github.com/gogf/gf/v2/test/gtest"
-	"github.com/gogf/gf/v2/util/gutil"
+	"github.com/joy12825/gf/v2/internal/json"
+	"github.com/joy12825/gf/v2/os/gtime"
+	"github.com/joy12825/gf/v2/test/gtest"
+	"github.com/joy12825/gf/v2/util/gutil"
 )
 
 func Test_New(t *testing.T) {

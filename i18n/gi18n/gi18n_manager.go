@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gi18n
 
@@ -12,15 +12,15 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/gogf/gf/v2/encoding/gjson"
-	"github.com/gogf/gf/v2/errors/gcode"
-	"github.com/gogf/gf/v2/errors/gerror"
-	"github.com/gogf/gf/v2/internal/intlog"
-	"github.com/gogf/gf/v2/os/gfile"
-	"github.com/gogf/gf/v2/os/gfsnotify"
-	"github.com/gogf/gf/v2/os/gres"
-	"github.com/gogf/gf/v2/text/gregex"
-	"github.com/gogf/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/encoding/gjson"
+	"github.com/joy12825/gf/v2/errors/gcode"
+	"github.com/joy12825/gf/v2/errors/gerror"
+	"github.com/joy12825/gf/v2/internal/intlog"
+	"github.com/joy12825/gf/v2/os/gfile"
+	"github.com/joy12825/gf/v2/os/gfsnotify"
+	"github.com/joy12825/gf/v2/os/gres"
+	"github.com/joy12825/gf/v2/text/gregex"
+	"github.com/joy12825/gf/v2/util/gconv"
 )
 
 // pathType is the type for i18n file path.

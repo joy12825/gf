@@ -10,12 +10,12 @@ use (
 // =====================================================================================================
 
 replace (
-	github.com/gogf/gf/contrib/drivers/clickhouse/v2 => ../../contrib/drivers/clickhouse
-	github.com/gogf/gf/contrib/drivers/mssql/v2 => ../../contrib/drivers/mssql
-	github.com/gogf/gf/contrib/drivers/mysql/v2 => ../../contrib/drivers/mysql
-	github.com/gogf/gf/contrib/drivers/oracle/v2 => ../../contrib/drivers/oracle
-	github.com/gogf/gf/contrib/drivers/pgsql/v2 => ../../contrib/drivers/pgsql
-	github.com/gogf/gf/contrib/drivers/sqlite/v2 => ../../contrib/drivers/sqlite
-	github.com/gogf/gf/contrib/drivers/dm/v2 => ../../contrib/drivers/dm
-	github.com/gogf/gf/v2 => ../../
+	github.com/joy12825/gf/contrib/drivers/clickhouse/v2 => ../../contrib/drivers/clickhouse
+	github.com/joy12825/gf/contrib/drivers/mssql/v2 => ../../contrib/drivers/mssql
+	github.com/joy12825/gf/contrib/drivers/mysql/v2 => ../../contrib/drivers/mysql
+	github.com/joy12825/gf/contrib/drivers/oracle/v2 => ../../contrib/drivers/oracle
+	github.com/joy12825/gf/contrib/drivers/pgsql/v2 => ../../contrib/drivers/pgsql
+	github.com/joy12825/gf/contrib/drivers/sqlite/v2 => ../../contrib/drivers/sqlite
+	github.com/joy12825/gf/contrib/drivers/dm/v2 => ../../contrib/drivers/dm
+	github.com/joy12825/gf/v2 => ../../
 )

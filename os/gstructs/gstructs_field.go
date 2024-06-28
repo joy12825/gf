@@ -2,16 +2,16 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gstructs
 
 import (
 	"reflect"
 
-	"github.com/gogf/gf/v2/internal/empty"
-	"github.com/gogf/gf/v2/internal/utils"
-	"github.com/gogf/gf/v2/util/gtag"
+	"github.com/joy12825/gf/v2/internal/empty"
+	"github.com/joy12825/gf/v2/internal/utils"
+	"github.com/joy12825/gf/v2/util/gtag"
 )
 
 // Tag returns the value associated with key in the tag string. If there is no

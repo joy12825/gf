@@ -2,14 +2,14 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package utils
 
 import (
 	"reflect"
 
-	"github.com/gogf/gf/v2/internal/empty"
+	"github.com/joy12825/gf/v2/internal/empty"
 )
 
 // IsNil checks whether `value` is nil, especially for interface{} type value.

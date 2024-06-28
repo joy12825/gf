@@ -2,14 +2,14 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gmetric
 
 import (
 	"sync"
 
-	"github.com/gogf/gf/v2/text/gregex"
+	"github.com/joy12825/gf/v2/text/gregex"
 )
 
 // SetGlobalAttributesOption binds the global attributes to certain instrument.
@@ -23,7 +23,7 @@ type SetGlobalAttributesOption struct {
 	// InstrumentPattern specifies instrument by regular expression on Instrument name.
 	// Example:
 	// 1. given `.+` will match all instruments.
-	// 2. given `github.com/gogf/gf.+` will match all goframe instruments.
+	// 2. given `github.com/joy12825/gf.+` will match all goframe instruments.
 	InstrumentPattern string
 }
 

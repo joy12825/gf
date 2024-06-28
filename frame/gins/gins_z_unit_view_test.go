@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gins
 
@@ -11,11 +11,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/gogf/gf/v2/internal/instance"
-	"github.com/gogf/gf/v2/os/gcfg"
-	"github.com/gogf/gf/v2/os/gfile"
-	"github.com/gogf/gf/v2/os/gtime"
-	"github.com/gogf/gf/v2/test/gtest"
+	"github.com/joy12825/gf/v2/internal/instance"
+	"github.com/joy12825/gf/v2/os/gcfg"
+	"github.com/joy12825/gf/v2/os/gfile"
+	"github.com/joy12825/gf/v2/os/gtime"
+	"github.com/joy12825/gf/v2/test/gtest"
 )
 
 func Test_View(t *testing.T) {

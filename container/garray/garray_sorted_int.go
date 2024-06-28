@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package garray
 
@@ -12,10 +12,10 @@ import (
 	"math"
 	"sort"
 
-	"github.com/gogf/gf/v2/internal/json"
-	"github.com/gogf/gf/v2/internal/rwmutex"
-	"github.com/gogf/gf/v2/util/gconv"
-	"github.com/gogf/gf/v2/util/grand"
+	"github.com/joy12825/gf/v2/internal/json"
+	"github.com/joy12825/gf/v2/internal/rwmutex"
+	"github.com/joy12825/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/util/grand"
 )
 
 // SortedIntArray is a golang sorted int array with rich features.

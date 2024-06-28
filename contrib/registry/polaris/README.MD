@@ -7,13 +7,13 @@ Use `PolarisMesh` as service registration, discovery management and heartbeat re
 ## Installation
 
 ```
-go get -u -v github.com/gogf/gf/contrib/registry/polaris/v2
+go get -u -v github.com/joy12825/gf/contrib/registry/polaris/v2
 ```
 
 suggested using `go.mod`:
 
 ```
-require github.com/gogf/gf/contrib/registry/polaris/v2 latest
+require github.com/joy12825/gf/contrib/registry/polaris/v2 latest
 ```
 
 ## Example
@@ -28,10 +28,10 @@ package main
 import (
     "github.com/polarismesh/polaris-go/pkg/config"
     
-    "github.com/gogf/gf/contrib/registry/polaris/v2"
-    "github.com/gogf/gf/v2/frame/g"
-    "github.com/gogf/gf/v2/net/ghttp"
-    "github.com/gogf/gf/v2/net/gsvc"
+    "github.com/joy12825/gf/contrib/registry/polaris/v2"
+    "github.com/joy12825/gf/v2/frame/g"
+    "github.com/joy12825/gf/v2/net/ghttp"
+    "github.com/joy12825/gf/v2/net/gsvc"
 )
 
 func main() {
@@ -60,11 +60,11 @@ import (
     
     "github.com/polarismesh/polaris-go/pkg/config"
     
-    "github.com/gogf/gf/contrib/registry/polaris/v2"
+    "github.com/joy12825/gf/contrib/registry/polaris/v2"
     
-    "github.com/gogf/gf/v2/frame/g"
-    "github.com/gogf/gf/v2/net/gsvc"
-    "github.com/gogf/gf/v2/os/gctx"
+    "github.com/joy12825/gf/v2/frame/g"
+    "github.com/joy12825/gf/v2/net/gsvc"
+    "github.com/joy12825/gf/v2/os/gctx"
 )
 
 func main() {

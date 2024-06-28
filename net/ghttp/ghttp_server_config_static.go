@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 // Static Searching Priority: Resource > ServerPaths > ServerRoot > SearchPath
 
@@ -12,10 +12,10 @@ import (
 	"context"
 	"strings"
 
-	"github.com/gogf/gf/v2/container/garray"
-	"github.com/gogf/gf/v2/os/gfile"
-	"github.com/gogf/gf/v2/os/gres"
-	"github.com/gogf/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/container/garray"
+	"github.com/joy12825/gf/v2/os/gfile"
+	"github.com/joy12825/gf/v2/os/gres"
+	"github.com/joy12825/gf/v2/util/gconv"
 )
 
 // staticPathItem is the item struct for static path configuration.

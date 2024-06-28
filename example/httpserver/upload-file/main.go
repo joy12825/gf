@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/net/ghttp"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/net/ghttp"
 )
 
 type UploadReq struct {

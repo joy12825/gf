@@ -2,27 +2,27 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gi18n_test
 
 import (
 	"time"
 
-	"github.com/gogf/gf/v2/encoding/gbase64"
-	"github.com/gogf/gf/v2/os/gctx"
+	"github.com/joy12825/gf/v2/encoding/gbase64"
+	"github.com/joy12825/gf/v2/os/gctx"
 
 	"context"
 	"testing"
 
-	"github.com/gogf/gf/v2/debug/gdebug"
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/i18n/gi18n"
-	"github.com/gogf/gf/v2/os/gfile"
-	"github.com/gogf/gf/v2/os/gres"
-	"github.com/gogf/gf/v2/os/gtime"
-	"github.com/gogf/gf/v2/test/gtest"
-	"github.com/gogf/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/debug/gdebug"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/i18n/gi18n"
+	"github.com/joy12825/gf/v2/os/gfile"
+	"github.com/joy12825/gf/v2/os/gres"
+	"github.com/joy12825/gf/v2/os/gtime"
+	"github.com/joy12825/gf/v2/test/gtest"
+	"github.com/joy12825/gf/v2/util/gconv"
 )
 
 func Test_Basic(t *testing.T) {

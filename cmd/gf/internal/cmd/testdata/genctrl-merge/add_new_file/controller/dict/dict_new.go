@@ -5,7 +5,7 @@
 package dict
 
 import (
-	"github.com/gogf/gf/cmd/gf/v2/internal/cmd/testdata/genctrl-merge/add_new_file/api/dict"
+	"github.com/joy12825/gf/cmd/gf/v2/internal/cmd/testdata/genctrl-merge/add_new_file/api/dict"
 )
 
 type ControllerV1 struct{}

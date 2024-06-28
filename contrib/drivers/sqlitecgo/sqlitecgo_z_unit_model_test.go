@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package sqlitecgo_test
 
@@ -15,20 +15,20 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gogf/gf/v2/container/garray"
-	"github.com/gogf/gf/v2/container/gmap"
-	"github.com/gogf/gf/v2/container/gvar"
-	"github.com/gogf/gf/v2/database/gdb"
-	"github.com/gogf/gf/v2/encoding/gjson"
-	"github.com/gogf/gf/v2/errors/gcode"
-	"github.com/gogf/gf/v2/errors/gerror"
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/os/glog"
-	"github.com/gogf/gf/v2/os/gtime"
-	"github.com/gogf/gf/v2/test/gtest"
-	"github.com/gogf/gf/v2/text/gstr"
-	"github.com/gogf/gf/v2/util/guid"
-	"github.com/gogf/gf/v2/util/gutil"
+	"github.com/joy12825/gf/v2/container/garray"
+	"github.com/joy12825/gf/v2/container/gmap"
+	"github.com/joy12825/gf/v2/container/gvar"
+	"github.com/joy12825/gf/v2/database/gdb"
+	"github.com/joy12825/gf/v2/encoding/gjson"
+	"github.com/joy12825/gf/v2/errors/gcode"
+	"github.com/joy12825/gf/v2/errors/gerror"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/os/glog"
+	"github.com/joy12825/gf/v2/os/gtime"
+	"github.com/joy12825/gf/v2/test/gtest"
+	"github.com/joy12825/gf/v2/text/gstr"
+	"github.com/joy12825/gf/v2/util/guid"
+	"github.com/joy12825/gf/v2/util/gutil"
 )
 
 func Test_Model_Insert(t *testing.T) {
@@ -107,7 +107,7 @@ func Test_Model_Insert(t *testing.T) {
 	})
 }
 
-// Fix issue: https://github.com/gogf/gf/issues/819
+// Fix issue: https://github.com/joy12825/gf/issues/819
 func Test_Model_Insert_WithStructAndSliceAttribute(t *testing.T) {
 	table := createTable()
 	defer dropTable(table)
@@ -2870,7 +2870,7 @@ func Test_Model_HasField(t *testing.T) {
 	})
 }
 
-// Issue: https://github.com/gogf/gf/issues/1002
+// Issue: https://github.com/joy12825/gf/issues/1002
 func Test_Model_Issue1002(t *testing.T) {
 	table := createTable()
 	defer dropTable(table)
@@ -2943,7 +2943,7 @@ func createTableForTimeZoneTest() string {
 	return tableName
 }
 
-// https://github.com/gogf/gf/issues/1012
+// https://github.com/joy12825/gf/issues/1012
 func Test_TimeZoneInsert(t *testing.T) {
 	tableName := createTableForTimeZoneTest()
 	defer dropTable(tableName)
@@ -3625,7 +3625,7 @@ func Test_Model_OmitEmptyWhere(t *testing.T) {
 	})
 }
 
-// https://github.com/gogf/gf/issues/1387
+// https://github.com/joy12825/gf/issues/1387
 func Test_Model_GTime_DefaultValue(t *testing.T) {
 	table := createTable()
 	defer dropTable(table)
@@ -3957,7 +3957,7 @@ func Test_Model_WherePrefixLike(t *testing.T) {
 }
 
 // TODO
-// https://github.com/gogf/gf/issues/1700
+// https://github.com/joy12825/gf/issues/1700
 // func Test_Model_Issue1700(t *testing.T) {
 // 	table := "user_" + gtime.Now().TimestampNanoStr()
 // 	if _, err := db.Exec(ctx, fmt.Sprintf(`
@@ -4006,7 +4006,7 @@ func Test_Model_WherePrefixLike(t *testing.T) {
 // 	})
 // }
 
-// https://github.com/gogf/gf/issues/1159
+// https://github.com/joy12825/gf/issues/1159
 func Test_ScanList_NoRecreate_PtrAttribute(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		type S1 struct {
@@ -4062,7 +4062,7 @@ func Test_ScanList_NoRecreate_PtrAttribute(t *testing.T) {
 	})
 }
 
-// https://github.com/gogf/gf/issues/1159
+// https://github.com/joy12825/gf/issues/1159
 func Test_ScanList_NoRecreate_StructAttribute(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		type S1 struct {
@@ -4118,7 +4118,7 @@ func Test_ScanList_NoRecreate_StructAttribute(t *testing.T) {
 	})
 }
 
-// https://github.com/gogf/gf/issues/1159
+// https://github.com/joy12825/gf/issues/1159
 func Test_ScanList_NoRecreate_SliceAttribute_Ptr(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		type S1 struct {
@@ -4222,7 +4222,7 @@ func Test_ScanList_NoRecreate_SliceAttribute_Ptr(t *testing.T) {
 	})
 }
 
-// https://github.com/gogf/gf/issues/1159
+// https://github.com/joy12825/gf/issues/1159
 func Test_ScanList_NoRecreate_SliceAttribute_Struct(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		type S1 struct {

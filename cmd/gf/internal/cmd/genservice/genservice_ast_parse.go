@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package genservice
 
@@ -11,13 +11,13 @@ import (
 	"go/parser"
 	"go/token"
 
-	"github.com/gogf/gf/v2/os/gfile"
+	"github.com/joy12825/gf/v2/os/gfile"
 )
 
 type pkgItem struct {
 	Alias     string `eg:"gdbas"`
-	Path      string `eg:"github.com/gogf/gf/v2/database/gdb"`
-	RawImport string `eg:"gdbas github.com/gogf/gf/v2/database/gdb"`
+	Path      string `eg:"github.com/joy12825/gf/v2/database/gdb"`
+	RawImport string `eg:"gdbas github.com/joy12825/gf/v2/database/gdb"`
 }
 
 type funcItem struct {

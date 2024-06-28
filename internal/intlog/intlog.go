@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 // Package intlog provides internal logging for GoFrame development usage only.
 package intlog
@@ -16,8 +16,8 @@ import (
 
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/gogf/gf/v2/debug/gdebug"
-	"github.com/gogf/gf/v2/internal/utils"
+	"github.com/joy12825/gf/v2/debug/gdebug"
+	"github.com/joy12825/gf/v2/internal/utils"
 )
 
 const (

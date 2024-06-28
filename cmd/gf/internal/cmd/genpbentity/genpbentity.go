@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package genpbentity
 
@@ -13,20 +13,20 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/gogf/gf/cmd/gf/v2/internal/utility/utils"
+	"github.com/joy12825/gf/cmd/gf/v2/internal/utility/utils"
 	"github.com/olekukonko/tablewriter"
 
-	"github.com/gogf/gf/cmd/gf/v2/internal/consts"
-	"github.com/gogf/gf/cmd/gf/v2/internal/utility/mlog"
-	"github.com/gogf/gf/v2/database/gdb"
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/os/gctx"
-	"github.com/gogf/gf/v2/os/gfile"
-	"github.com/gogf/gf/v2/os/gtime"
-	"github.com/gogf/gf/v2/text/gregex"
-	"github.com/gogf/gf/v2/text/gstr"
-	"github.com/gogf/gf/v2/util/gconv"
-	"github.com/gogf/gf/v2/util/gtag"
+	"github.com/joy12825/gf/cmd/gf/v2/internal/consts"
+	"github.com/joy12825/gf/cmd/gf/v2/internal/utility/mlog"
+	"github.com/joy12825/gf/v2/database/gdb"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/os/gctx"
+	"github.com/joy12825/gf/v2/os/gfile"
+	"github.com/joy12825/gf/v2/os/gtime"
+	"github.com/joy12825/gf/v2/text/gregex"
+	"github.com/joy12825/gf/v2/text/gstr"
+	"github.com/joy12825/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/util/gtag"
 )
 
 type (
@@ -62,7 +62,7 @@ const (
 gf gen pbentity
 gf gen pbentity -l "mysql:root:12345678@tcp(127.0.0.1:3306)/test"
 gf gen pbentity -p ./protocol/demos/entity -t user,user_detail,user_login
-gf gen pbentity -r user_ -k github.com/gogf/gf/example/protobuf
+gf gen pbentity -r user_ -k github.com/joy12825/gf/example/protobuf
 gf gen pbentity -r user_
 `
 

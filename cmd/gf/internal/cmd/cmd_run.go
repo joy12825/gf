@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package cmd
 
@@ -14,16 +14,16 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/gogf/gf/v2/container/gtype"
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/os/gfile"
-	"github.com/gogf/gf/v2/os/gfsnotify"
-	"github.com/gogf/gf/v2/os/gproc"
-	"github.com/gogf/gf/v2/os/gtime"
-	"github.com/gogf/gf/v2/os/gtimer"
-	"github.com/gogf/gf/v2/util/gtag"
+	"github.com/joy12825/gf/v2/container/gtype"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/os/gfile"
+	"github.com/joy12825/gf/v2/os/gfsnotify"
+	"github.com/joy12825/gf/v2/os/gproc"
+	"github.com/joy12825/gf/v2/os/gtime"
+	"github.com/joy12825/gf/v2/os/gtimer"
+	"github.com/joy12825/gf/v2/util/gtag"
 
-	"github.com/gogf/gf/cmd/gf/v2/internal/utility/mlog"
+	"github.com/joy12825/gf/cmd/gf/v2/internal/utility/mlog"
 )
 
 var (

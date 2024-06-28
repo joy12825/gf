@@ -9,21 +9,21 @@ Powerful database drivers for package gdb.
 Let's take `mysql` for example.
 
 ```shell
-go get -u github.com/gogf/gf/contrib/drivers/mysql/v2
+go get -u github.com/joy12825/gf/contrib/drivers/mysql/v2
 # Easy to copy
-go get -u github.com/gogf/gf/contrib/drivers/clickhouse/v2
-go get -u github.com/gogf/gf/contrib/drivers/dm/v2
-go get -u github.com/gogf/gf/contrib/drivers/mssql/v2
-go get -u github.com/gogf/gf/contrib/drivers/oracle/v2
-go get -u github.com/gogf/gf/contrib/drivers/pgsql/v2
-go get -u github.com/gogf/gf/contrib/drivers/sqlite/v2
-go get -u github.com/gogf/gf/contrib/drivers/sqlitecgo/v2
+go get -u github.com/joy12825/gf/contrib/drivers/clickhouse/v2
+go get -u github.com/joy12825/gf/contrib/drivers/dm/v2
+go get -u github.com/joy12825/gf/contrib/drivers/mssql/v2
+go get -u github.com/joy12825/gf/contrib/drivers/oracle/v2
+go get -u github.com/joy12825/gf/contrib/drivers/pgsql/v2
+go get -u github.com/joy12825/gf/contrib/drivers/sqlite/v2
+go get -u github.com/joy12825/gf/contrib/drivers/sqlitecgo/v2
 ```
 
 Choose and import the driver to your project:
 
 ```go
-import _ "github.com/gogf/gf/contrib/drivers/mysql/v2"
+import _ "github.com/joy12825/gf/contrib/drivers/mysql/v2"
 ```
 
 Commonly imported at top of `main.go`:
@@ -32,7 +32,7 @@ Commonly imported at top of `main.go`:
 package main
 
 import (
-	_ "github.com/gogf/gf/contrib/drivers/mysql/v2"
+	_ "github.com/joy12825/gf/contrib/drivers/mysql/v2"
 
 	// Other imported packages.
 )
@@ -47,13 +47,13 @@ func main() {
 ### MySQL/MariaDB/TiDB
 
 ```go
-import _ "github.com/gogf/gf/contrib/drivers/mysql/v2"
+import _ "github.com/joy12825/gf/contrib/drivers/mysql/v2"
 ```
 
 ### SQLite
 
 ```go
-import _ "github.com/gogf/gf/contrib/drivers/sqlite/v2"
+import _ "github.com/joy12825/gf/contrib/drivers/sqlite/v2"
 ```
 
 #### cgo version
@@ -61,13 +61,13 @@ import _ "github.com/gogf/gf/contrib/drivers/sqlite/v2"
 When the target is a 32-bit Windows system, the cgo version needs to be used.
 
 ```go
-import _ "github.com/gogf/gf/contrib/drivers/sqlitecgo/v2"
+import _ "github.com/joy12825/gf/contrib/drivers/sqlitecgo/v2"
 ```
 
 ### PostgreSQL
 
 ```go
-import _ "github.com/gogf/gf/contrib/drivers/pgsql/v2"
+import _ "github.com/joy12825/gf/contrib/drivers/pgsql/v2"
 ```
 
 Note:
@@ -77,7 +77,7 @@ Note:
 ### SQL Server
 
 ```go
-import _ "github.com/gogf/gf/contrib/drivers/mssql/v2"
+import _ "github.com/joy12825/gf/contrib/drivers/mssql/v2"
 ```
 
 Note:
@@ -90,7 +90,7 @@ Note:
 ### Oracle
 
 ```go
-import _ "github.com/gogf/gf/contrib/drivers/oracle/v2"
+import _ "github.com/joy12825/gf/contrib/drivers/oracle/v2"
 ```
 
 Note:
@@ -101,7 +101,7 @@ Note:
 ### ClickHouse
 
 ```go
-import _ "github.com/gogf/gf/contrib/drivers/clickhouse/v2"
+import _ "github.com/joy12825/gf/contrib/drivers/clickhouse/v2"
 ```
 
 Note:
@@ -114,7 +114,7 @@ Note:
 ### DM
 
 ```go
-import _ "github.com/gogf/gf/contrib/drivers/dm/v2"
+import _ "github.com/joy12825/gf/contrib/drivers/dm/v2"
 ```
 
 Note:

@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gmetric_test
 
@@ -10,15 +10,15 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/gogf/gf/v2/os/gmetric"
-	"github.com/gogf/gf/v2/test/gtest"
+	"github.com/joy12825/gf/v2/os/gmetric"
+	"github.com/joy12825/gf/v2/test/gtest"
 )
 
 func Test_Counter(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		var (
 			meterOption = gmetric.MeterOption{
-				Instrument:        "github.com/gogf/gf/example/metric/basic",
+				Instrument:        "github.com/joy12825/gf/example/metric/basic",
 				InstrumentVersion: "v1.0",
 			}
 			metricName   = "goframe.metric.demo.counter"
@@ -45,7 +45,7 @@ func Test_Histogram(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		var (
 			meterOption = gmetric.MeterOption{
-				Instrument:        "github.com/gogf/gf/example/metric/basic",
+				Instrument:        "github.com/joy12825/gf/example/metric/basic",
 				InstrumentVersion: "v1.0",
 			}
 			metricName   = "goframe.metric.demo.histogram"

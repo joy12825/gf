@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gconv
 
@@ -11,9 +11,9 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/gogf/gf/v2/internal/intlog"
-	"github.com/gogf/gf/v2/internal/json"
-	"github.com/gogf/gf/v2/os/gtime"
+	"github.com/joy12825/gf/v2/internal/intlog"
+	"github.com/joy12825/gf/v2/internal/json"
+	"github.com/joy12825/gf/v2/os/gtime"
 )
 
 // Convert converts the variable `fromValue` to the type `toTypeName`, the type `toTypeName` is specified by string.

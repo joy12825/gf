@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gtcp_test
 
@@ -12,11 +12,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gogf/gf/v2/debug/gdebug"
-	"github.com/gogf/gf/v2/net/gtcp"
-	"github.com/gogf/gf/v2/os/gfile"
-	"github.com/gogf/gf/v2/test/gtest"
-	"github.com/gogf/gf/v2/text/gstr"
+	"github.com/joy12825/gf/v2/debug/gdebug"
+	"github.com/joy12825/gf/v2/net/gtcp"
+	"github.com/joy12825/gf/v2/os/gfile"
+	"github.com/joy12825/gf/v2/test/gtest"
+	"github.com/joy12825/gf/v2/text/gstr"
 )
 
 var (

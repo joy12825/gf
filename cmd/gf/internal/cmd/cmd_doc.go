@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package cmd
 
@@ -15,15 +15,15 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/gogf/gf/cmd/gf/v2/internal/utility/mlog"
-	"github.com/gogf/gf/v2/encoding/gcompress"
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/os/gfile"
+	"github.com/joy12825/gf/cmd/gf/v2/internal/utility/mlog"
+	"github.com/joy12825/gf/v2/encoding/gcompress"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/os/gfile"
 )
 
 const (
 	// DocURL is the download address of the document
-	DocURL = "https://github.com/gogf/gf/archive/refs/heads/gh-pages.zip"
+	DocURL = "https://github.com/joy12825/gf/archive/refs/heads/gh-pages.zip"
 )
 
 var (

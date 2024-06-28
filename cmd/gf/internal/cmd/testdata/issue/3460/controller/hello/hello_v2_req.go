@@ -3,10 +3,10 @@ package hello
 import (
 	"context"
 
-	"github.com/gogf/gf/v2/errors/gcode"
-	"github.com/gogf/gf/v2/errors/gerror"
+	"github.com/joy12825/gf/v2/errors/gcode"
+	"github.com/joy12825/gf/v2/errors/gerror"
 
-	"github.com/gogf/gf/cmd/gf/v2/internal/cmd/testdata/issue/3460/api/hello/v2"
+	"github.com/joy12825/gf/cmd/gf/v2/internal/cmd/testdata/issue/3460/api/hello/v2"
 )
 
 func (c *ControllerV2) DictTypeAddPage(ctx context.Context, req *v2.DictTypeAddPageReq) (res *v2.DictTypeAddPageRes, err error) {

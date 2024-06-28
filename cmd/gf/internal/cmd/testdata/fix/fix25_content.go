@@ -1,14 +1,10 @@
 package testdata
 
 import (
-	"fmt"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/net/ghttp"
+	"github.com/joy12825/gf/v2/util/guid"
 	"testing"
-	"time"
-
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/net/ghttp"
-	"github.com/gogf/gf/v2/test/gtest"
-	"github.com/gogf/gf/v2/util/guid"
 )
 
 func Test_Router_Hook_Multi(t *testing.T) {

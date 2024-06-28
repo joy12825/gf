@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with l file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 //
 
 // Package glist provides most commonly used doubly linked list container which also supports
@@ -13,10 +13,10 @@ import (
 	"bytes"
 	"container/list"
 
-	"github.com/gogf/gf/v2/internal/deepcopy"
-	"github.com/gogf/gf/v2/internal/json"
-	"github.com/gogf/gf/v2/internal/rwmutex"
-	"github.com/gogf/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/internal/deepcopy"
+	"github.com/joy12825/gf/v2/internal/json"
+	"github.com/joy12825/gf/v2/internal/rwmutex"
+	"github.com/joy12825/gf/v2/util/gconv"
 )
 
 type (

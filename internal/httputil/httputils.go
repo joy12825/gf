@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 // Package httputil provides HTTP functions for internal usage only.
 package httputil
@@ -11,10 +11,10 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/gogf/gf/v2/encoding/gurl"
-	"github.com/gogf/gf/v2/internal/empty"
-	"github.com/gogf/gf/v2/text/gstr"
-	"github.com/gogf/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/encoding/gurl"
+	"github.com/joy12825/gf/v2/internal/empty"
+	"github.com/joy12825/gf/v2/text/gstr"
+	"github.com/joy12825/gf/v2/util/gconv"
 )
 
 const (

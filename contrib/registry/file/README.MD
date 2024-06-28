@@ -6,11 +6,11 @@ Use `file` as service registration and discovery management.
 
 ## Installation
 ```
-go get -u -v github.com/gogf/gf/contrib/registry/file/v2
+go get -u -v github.com/joy12825/gf/contrib/registry/file/v2
 ```
 suggested using `go.mod`:
 ```
-require github.com/gogf/gf/contrib/registry/file/v2 latest
+require github.com/joy12825/gf/contrib/registry/file/v2 latest
 ```
 
 
@@ -23,11 +23,11 @@ require github.com/gogf/gf/contrib/registry/file/v2 latest
 package main
 
 import (
-	"github.com/gogf/gf/contrib/registry/file/v2"
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/net/ghttp"
-	"github.com/gogf/gf/v2/net/gsvc"
-	"github.com/gogf/gf/v2/os/gfile"
+	"github.com/joy12825/gf/contrib/registry/file/v2"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/net/ghttp"
+	"github.com/joy12825/gf/v2/net/gsvc"
+	"github.com/joy12825/gf/v2/os/gfile"
 )
 
 func main() {
@@ -51,11 +51,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/gogf/gf/contrib/registry/file/v2"
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/net/gsvc"
-	"github.com/gogf/gf/v2/os/gctx"
-	"github.com/gogf/gf/v2/os/gfile"
+	"github.com/joy12825/gf/contrib/registry/file/v2"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/net/gsvc"
+	"github.com/joy12825/gf/v2/os/gctx"
+	"github.com/joy12825/gf/v2/os/gfile"
 )
 
 func main() {

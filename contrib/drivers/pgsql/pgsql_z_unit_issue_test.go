@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package pgsql_test
 
@@ -10,14 +10,14 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/gogf/gf/v2/database/gdb"
+	"github.com/joy12825/gf/v2/database/gdb"
 
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/os/gtime"
-	"github.com/gogf/gf/v2/test/gtest"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/os/gtime"
+	"github.com/joy12825/gf/v2/test/gtest"
 )
 
-// https://github.com/gogf/gf/issues/3330
+// https://github.com/joy12825/gf/issues/3330
 func Test_Issue3330(t *testing.T) {
 	var (
 		table      = fmt.Sprintf(`%s_%d`, TablePrefix+"test", gtime.TimestampNano())
@@ -75,7 +75,7 @@ func Test_Issue3330(t *testing.T) {
 	})
 }
 
-// https://github.com/gogf/gf/issues/3632
+// https://github.com/joy12825/gf/issues/3632
 func Test_Issue3632(t *testing.T) {
 	type Member struct {
 		One []int64    `json:"one" orm:"one"`

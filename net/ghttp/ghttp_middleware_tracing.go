@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package ghttp
 
@@ -17,17 +17,16 @@ import (
 	"go.opentelemetry.io/otel/propagation"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/gogf/gf/v2"
-	"github.com/gogf/gf/v2/errors/gerror"
-	"github.com/gogf/gf/v2/internal/httputil"
-	"github.com/gogf/gf/v2/internal/utils"
-	"github.com/gogf/gf/v2/net/gtrace"
-	"github.com/gogf/gf/v2/os/gctx"
-	"github.com/gogf/gf/v2/util/gconv"
+	"github.com/joy12825/gf/v2/errors/gerror"
+	"github.com/joy12825/gf/v2/internal/httputil"
+	"github.com/joy12825/gf/v2/internal/utils"
+	"github.com/joy12825/gf/v2/net/gtrace"
+	"github.com/joy12825/gf/v2/os/gctx"
+	"github.com/joy12825/gf/v2/util/gconv"
 )
 
 const (
-	instrumentName                              = "github.com/gogf/gf/v2/net/ghttp.Server"
+	instrumentName                              = "github.com/joy12825/gf/v2/net/ghttp.Server"
 	tracingEventHttpRequest                     = "http.request"
 	tracingEventHttpRequestHeaders              = "http.request.headers"
 	tracingEventHttpRequestBaggage              = "http.request.baggage"

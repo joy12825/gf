@@ -2,14 +2,14 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package redis
 
 import (
 	"reflect"
 
-	"github.com/gogf/gf/v2/os/gstructs"
+	"github.com/joy12825/gf/v2/os/gstructs"
 )
 
 func mustMergeOptionToArgs(args []interface{}, option interface{}) []interface{} {
