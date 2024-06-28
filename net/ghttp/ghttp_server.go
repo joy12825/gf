@@ -285,7 +285,7 @@ func (s *Server) doRouterMapDump() {
 		}
 	}
 	if isJustDefaultServerAndDomain {
-		headers = []string{"ADDRESS", "METHOD", "ROUTE", "HANDLER", "MIDDLEWARE"}
+		headers = []string{"ADDRESS", "METHOD", "ROUTE", "GROUP", "HANDLER", "MIDDLEWARE"}
 	}
 	if len(routes) > 0 {
 		buffer := bytes.NewBuffer(nil)
@@ -316,6 +316,7 @@ func (s *Server) doRouterMapDump() {
 					item.Address,
 					item.Method,
 					item.Route,
+					item.Group,
 					handlerName,
 					item.Middleware,
 				)
@@ -357,7 +358,7 @@ func (s *Server) GetRoutes() []RouterItem {
 		address += "tls" + s.config.HTTPSAddr
 	}
 	for k, handlerItems := range s.routesMap {
-		array, _ := gregex.MatchString(`(.*?)%([A-Z]+):(.+)@(.+)`, k)
+		array, _ := gregex.MatchString(`(.*?)%([A-Z]+):(.+)@(.+)@(.+)`, k)
 		for index := len(handlerItems) - 1; index >= 0; index-- {
 			var (
 				handlerItem = handlerItems[index]
@@ -369,6 +370,7 @@ func (s *Server) GetRoutes() []RouterItem {
 					Middleware: array[1],
 					Method:     array[2],
 					Route:      array[3],
+					Group:      array[5],
 					Priority:   index,
 					Handler:    handlerItem,
 				}

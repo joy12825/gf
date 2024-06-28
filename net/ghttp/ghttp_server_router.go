@@ -33,14 +33,15 @@ var (
 // routerMapKey creates and returns a unique router key for given parameters.
 // This key is used for Server.routerMap attribute, which is mainly for checks for
 // repeated router registering.
-func (s *Server) routerMapKey(hook HookName, method, path, domain string) string {
-	return string(hook) + "%" + s.serveHandlerKey(method, path, domain)
+func (s *Server) routerMapKey(hook HookName, method, path, domain, actionGroup string) string {
+	return string(hook) + "%" + s.serveHandlerKey(method, path, domain, actionGroup)
 }
 
 // parsePattern parses the given pattern to domain, method and path variable.
-func (s *Server) parsePattern(pattern string) (domain, method, path string, err error) {
+func (s *Server) parsePattern(pattern string) (domain, method, path, actionGroup string, err error) {
 	path = strings.TrimSpace(pattern)
 	domain = DefaultDomainName
+	actionGroup = DefaultActionGroupName
 	method = defaultMethod
 	if array, err := gregex.MatchString(`([a-zA-Z]+):(.+)`, pattern); len(array) > 1 && err == nil {
 		path = strings.TrimSpace(array[2])
@@ -86,7 +87,7 @@ func (s *Server) setHandler(ctx context.Context, in setHandlerInput) {
 		_, file, line := gdebug.CallerWithFilter([]string{consts.StackFilterKeyForGoFrame})
 		handler.Source = fmt.Sprintf(`%s:%d`, file, line)
 	}
-	domain, method, uri, err := s.parsePattern(pattern)
+	domain, method, uri, actionGroup, err := s.parsePattern(pattern)
 	if err != nil {
 		s.Logger().Fatalf(ctx, `invalid pattern "%s", %+v`, pattern, err)
 		return
@@ -100,8 +101,14 @@ func (s *Server) setHandler(ctx context.Context, in setHandlerInput) {
 		if v := gmeta.Get(objectReq, gtag.Path); !v.IsEmpty() {
 			uri = v.String()
 		}
+		if v := gmeta.Get(objectReq, gtag.Action); !v.IsEmpty() {
+			uri = v.String()
+		}
 		if v := gmeta.Get(objectReq, gtag.Domain); !v.IsEmpty() {
 			domain = v.String()
+		}
+		if v := gmeta.Get(objectReq, gtag.ActionGroup); !v.IsEmpty() {
+			actionGroup = v.String()
 		}
 		if v := gmeta.Get(objectReq, gtag.Method); !v.IsEmpty() {
 			method = v.String()
@@ -112,7 +119,7 @@ func (s *Server) setHandler(ctx context.Context, in setHandlerInput) {
 			for _, v := range methods {
 				// Each method has it own handler.
 				clonedHandler := *handler
-				s.doSetHandler(ctx, &clonedHandler, prefix, uri, pattern, v, domain)
+				s.doSetHandler(ctx, &clonedHandler, prefix, uri, pattern, v, domain, actionGroup)
 			}
 			return
 		}
@@ -121,12 +128,12 @@ func (s *Server) setHandler(ctx context.Context, in setHandlerInput) {
 			method = defaultMethod
 		}
 	}
-	s.doSetHandler(ctx, handler, prefix, uri, pattern, method, domain)
+	s.doSetHandler(ctx, handler, prefix, uri, pattern, method, domain, actionGroup)
 }
 
 func (s *Server) doSetHandler(
 	ctx context.Context, handler *HandlerItem,
-	prefix, uri, pattern, method, domain string,
+	prefix, uri, pattern, method, domain, actionGroup string,
 ) {
 	if !s.isValidMethod(method) {
 		s.Logger().Fatalf(
@@ -144,12 +151,12 @@ func (s *Server) doSetHandler(
 		uri = "/"
 	}
 
-	if len(uri) == 0 || uri[0] != '/' {
+	if len(uri) == 0 || (strings.Contains(uri, "/") && uri[0] != '/') {
 		s.Logger().Fatalf(ctx, `invalid pattern "%s", URI should lead with '/'`, pattern)
 	}
 
 	// Repeated router checks, this feature can be disabled by server configuration.
-	var routerKey = s.routerMapKey(handler.HookName, method, uri, domain)
+	var routerKey = s.routerMapKey(handler.HookName, method, uri, domain, actionGroup)
 	if !s.config.RouteOverWrite {
 		switch handler.Type {
 		case HandlerTypeHandler, HandlerTypeObject:
@@ -159,8 +166,6 @@ func (s *Server) doSetHandler(
 					switch item.Type {
 					case HandlerTypeHandler, HandlerTypeObject:
 						duplicatedHandler = items[i]
-					}
-					if duplicatedHandler != nil {
 						break
 					}
 				}
@@ -182,7 +187,7 @@ func (s *Server) doSetHandler(
 		Uri:      uri,
 		Domain:   domain,
 		Method:   strings.ToUpper(method),
-		Priority: strings.Count(uri[1:], "/"),
+		Priority: strings.Count(uri, "/"),
 	}
 	handler.Router.RegRule, handler.Router.RegNames = s.patternToRegular(uri)
 
@@ -197,8 +202,10 @@ func (s *Server) doSetHandler(
 	)
 	if strings.EqualFold("/", uri) {
 		array = []string{"/"}
-	} else {
+	} else if strings.Contains(uri, "/") {
 		array = strings.Split(uri[1:], "/")
+	} else {
+		array = []string{fmt.Sprintf("%s@%s", uri, actionGroup)}
 	}
 	// Multilayer hash table:
 	// 1. Each node of the table is separated by URI path which is split by char '/'.
@@ -419,7 +426,12 @@ func (s *Server) patternToRegular(rule string) (regular string, names []string) 
 		return rule, nil
 	}
 	regular = "^"
-	var array = strings.Split(rule[1:], "/")
+	var array []string
+	if strings.Contains(rule, "/") {
+		array = strings.Split(rule[1:], "/")
+	} else {
+		array = []string{rule}
+	}
 	for _, v := range array {
 		if len(v) == 0 {
 			continue

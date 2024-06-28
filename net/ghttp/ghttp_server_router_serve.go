@@ -29,23 +29,27 @@ type handlerCacheItem struct {
 }
 
 // serveHandlerKey creates and returns a handler key for router.
-func (s *Server) serveHandlerKey(method, path, domain string) string {
+func (s *Server) serveHandlerKey(method, path, domain, actionGroup string) string {
 	if len(domain) > 0 {
 		domain = "@" + domain
 	}
-	if method == "" {
-		return path + strings.ToLower(domain)
+	if len(actionGroup) > 0 {
+		actionGroup = "@" + actionGroup
 	}
-	return strings.ToUpper(method) + ":" + path + strings.ToLower(domain)
+	if method == "" {
+		return path + strings.ToLower(domain) + strings.ToLower(actionGroup)
+	}
+	return strings.ToUpper(method) + ":" + path + strings.ToLower(domain) + strings.ToLower(actionGroup)
 }
 
 // getHandlersWithCache searches the router item with cache feature for a given request.
 func (s *Server) getHandlersWithCache(r *Request) (parsedItems []*HandlerItemParsed, serveItem *HandlerItemParsed, hasHook, hasServe bool) {
 	var (
-		ctx    = r.Context()
-		method = r.Method
-		path   = r.URL.Path
-		host   = r.GetHost()
+		ctx         = r.Context()
+		method      = r.Method
+		path        = r.URL.Path
+		actionGroup = DefaultActionGroupName
+		host        = r.GetHost()
 	)
 	// In case of, eg:
 	// Case 1:
@@ -70,9 +74,21 @@ func (s *Server) getHandlersWithCache(r *Request) (parsedItems []*HandlerItemPar
 	if xUrlPath := r.Header.Get(HeaderXUrlPath); xUrlPath != "" {
 		path = xUrlPath
 	}
-	var handlerCacheKey = s.serveHandlerKey(method, path, host)
+	if action := r.Header.Get(HeaderXAction); action != "" {
+		path = action
+	}
+	if queryAction := r.GetQuery(HeaderXAction).String(); queryAction != "" {
+		path = queryAction
+	}
+	if group := r.Header.Get(HeaderXActionGroup); group != "" {
+		actionGroup = group
+	}
+	if queryActionGroup := r.GetQuery(HeaderXActionGroup).String(); queryActionGroup != "" {
+		actionGroup = queryActionGroup
+	}
+	var handlerCacheKey = s.serveHandlerKey(method, path, host, actionGroup)
 	value, err := s.serveCache.GetOrSetFunc(ctx, handlerCacheKey, func(ctx context.Context) (interface{}, error) {
-		parsedItems, serveItem, hasHook, hasServe = s.searchHandlers(method, path, host)
+		parsedItems, serveItem, hasHook, hasServe = s.searchHandlers(method, path, host, actionGroup)
 		if parsedItems != nil {
 			return &handlerCacheItem{parsedItems, serveItem, hasHook, hasServe}, nil
 		}
@@ -90,7 +106,7 @@ func (s *Server) getHandlersWithCache(r *Request) (parsedItems []*HandlerItemPar
 
 // searchHandlers retrieve and returns the routers with given parameters.
 // Note that the returned routers contain serving handler, middleware handlers and hook handlers.
-func (s *Server) searchHandlers(method, path, domain string) (parsedItems []*HandlerItemParsed, serveItem *HandlerItemParsed, hasHook, hasServe bool) {
+func (s *Server) searchHandlers(method, path, domain, actionGroup string) (parsedItems []*HandlerItemParsed, serveItem *HandlerItemParsed, hasHook, hasServe bool) {
 	if len(path) == 0 {
 		return nil, nil, false, false
 	}
@@ -114,8 +130,10 @@ func (s *Server) searchHandlers(method, path, domain string) (parsedItems []*Han
 	var array []string
 	if strings.EqualFold("/", path) {
 		array = []string{"/"}
-	} else {
+	} else if strings.Contains(path, "/") {
 		array = strings.Split(path[1:], "/")
+	} else {
+		array = []string{fmt.Sprintf("%s@%s", path, actionGroup)}
 	}
 	var (
 		lastMiddlewareElem    *glist.Element
@@ -197,7 +215,13 @@ func (s *Server) searchHandlers(method, path, domain string) (parsedItems []*Han
 				}
 				if item.Router.Method == defaultMethod || item.Router.Method == method {
 					// Note the rule having no fuzzy rules: len(match) == 1
-					if match, err := gregex.MatchString(item.Router.RegRule, path); err == nil && len(match) > 0 {
+					var matchPath string
+					if strings.Contains(path, "/") {
+						matchPath = path
+					} else {
+						matchPath = fmt.Sprintf("/%s", path)
+					}
+					if match, err := gregex.MatchString(item.Router.RegRule, matchPath); err == nil && len(match) > 0 {
 						parsedItem := &HandlerItemParsed{item, nil}
 						// If the rule contains fuzzy names,
 						// it needs paring the URL to retrieve the values for the names.

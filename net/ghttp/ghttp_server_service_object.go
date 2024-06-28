@@ -83,13 +83,13 @@ func (s *Server) doBindObject(ctx context.Context, in doBindObjectInput) {
 	}
 	// If the `method` in `pattern` is `defaultMethod`,
 	// it removes for convenience for next statement control.
-	domain, method, path, err := s.parsePattern(in.Pattern)
+	domain, method, path, actionGroup, err := s.parsePattern(in.Pattern)
 	if err != nil {
 		s.Logger().Fatalf(ctx, `%+v`, err)
 		return
 	}
 	if gstr.Equal(method, defaultMethod) {
-		in.Pattern = s.serveHandlerKey("", path, domain)
+		in.Pattern = s.serveHandlerKey("", path, domain,actionGroup)
 	}
 	var (
 		handlerMap   = make(map[string]*HandlerItem)

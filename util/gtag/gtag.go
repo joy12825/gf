@@ -25,6 +25,8 @@ const (
 	Additional        = "additional"   // Additional tag for struct, usually for additional description of command.
 	AdditionalShort   = "ad"           // Short name of Additional.
 	Path              = `path`         // Route path for HTTP request.
+	Action            = `action`       // Route action for HTTP request.
+	ActionGroup       = `group`        // Route action group for HTTP request.
 	Method            = `method`       // Route method for HTTP request.
 	Domain            = `domain`       // Route domain for HTTP request.
 	Mime              = `mime`         // MIME type for HTTP request/response.

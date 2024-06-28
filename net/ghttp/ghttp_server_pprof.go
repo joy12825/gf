@@ -43,7 +43,7 @@ func (d *Domain) EnablePProf(pattern ...string) {
 		p = pattern[0]
 	}
 	up := &utilPProf{}
-	_, _, uri, _ := d.server.parsePattern(p)
+	_, _, uri, _, _ := d.server.parsePattern(p)
 	uri = strings.TrimRight(uri, "/")
 	d.Group(uri, func(group *RouterGroup) {
 		group.ALL("/*action", up.Index)

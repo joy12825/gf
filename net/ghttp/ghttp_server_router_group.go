@@ -302,7 +302,7 @@ func (g *RouterGroup) doBindRoutersToServer(ctx context.Context, item *preBindIt
 	prefix := g.getPrefix()
 	// Route check.
 	if len(prefix) > 0 {
-		domain, method, path, err := g.server.parsePattern(pattern)
+		domain, method, path, actionGroup, err := g.server.parsePattern(pattern)
 		if err != nil {
 			g.server.Logger().Fatalf(ctx, "invalid route pattern: %s", pattern)
 		}
@@ -314,7 +314,7 @@ func (g *RouterGroup) doBindRoutersToServer(ctx context.Context, item *preBindIt
 			pattern = path
 		} else {
 			pattern = g.server.serveHandlerKey(
-				method, path, domain,
+				method, path, domain, actionGroup,
 			)
 		}
 	}

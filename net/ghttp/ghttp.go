@@ -8,6 +8,7 @@
 package ghttp
 
 import (
+	"github.com/gogf/gf/v2/os/gstructs"
 	"net/http"
 	"reflect"
 	"sync"
@@ -24,7 +25,6 @@ import (
 	"github.com/gogf/gf/v2/os/gcache"
 	"github.com/gogf/gf/v2/os/gctx"
 	"github.com/gogf/gf/v2/os/gsession"
-	"github.com/gogf/gf/v2/os/gstructs"
 	"github.com/gogf/gf/v2/util/gtag"
 )
 
@@ -68,6 +68,7 @@ type (
 		Middleware       string       // Bound middleware.
 		Method           string       // Handler method name.
 		Route            string       // Route URI.
+		Group            string       // Route Group.
 		Priority         int          // Just for reference.
 		IsServiceHandler bool         // Is service handler.
 	}
@@ -131,19 +132,22 @@ const (
 )
 
 const (
-	HeaderXUrlPath                     = "x-url-path"         // Used for custom route handler, which does not change URL.Path.
-	HookBeforeServe       HookName     = "HOOK_BEFORE_SERVE"  // Hook handler before route handler/file serving.
-	HookAfterServe        HookName     = "HOOK_AFTER_SERVE"   // Hook handler after route handler/file serving.
-	HookBeforeOutput      HookName     = "HOOK_BEFORE_OUTPUT" // Hook handler before response output.
-	HookAfterOutput       HookName     = "HOOK_AFTER_OUTPUT"  // Hook handler after response output.
-	ServerStatusStopped   ServerStatus = 0
-	ServerStatusRunning   ServerStatus = 1
-	DefaultServerName                  = "default"
-	DefaultDomainName                  = "default"
-	HandlerTypeHandler    HandlerType  = "handler"
-	HandlerTypeObject     HandlerType  = "object"
-	HandlerTypeMiddleware HandlerType  = "middleware"
-	HandlerTypeHook       HandlerType  = "hook"
+	HeaderXUrlPath                      = "x-url-path"         // Used for custom route handler, which does not change URL.Path.
+	HeaderXAction                       = "x-action"           // Used for custom route handler, which does not change URL.Path.
+	HeaderXActionGroup                  = "x-action-group"     // Used for custom route handler, which does not change URL.Path.
+	HookBeforeServe        HookName     = "HOOK_BEFORE_SERVE"  // Hook handler before route handler/file serving.
+	HookAfterServe         HookName     = "HOOK_AFTER_SERVE"   // Hook handler after route handler/file serving.
+	HookBeforeOutput       HookName     = "HOOK_BEFORE_OUTPUT" // Hook handler before response output.
+	HookAfterOutput        HookName     = "HOOK_AFTER_OUTPUT"  // Hook handler after response output.
+	ServerStatusStopped    ServerStatus = 0
+	ServerStatusRunning    ServerStatus = 1
+	DefaultServerName                   = "default"
+	DefaultDomainName                   = "default"
+	DefaultActionGroupName              = "default"
+	HandlerTypeHandler     HandlerType  = "handler"
+	HandlerTypeObject      HandlerType  = "object"
+	HandlerTypeMiddleware  HandlerType  = "middleware"
+	HandlerTypeHook        HandlerType  = "hook"
 )
 
 const (
