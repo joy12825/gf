@@ -3,7 +3,7 @@ module github.com/joy12825/gf/contrib/drivers/pgsql/v2
 go 1.18
 
 require (
-	github.com/joy12825/gf/v2 v2.7.2
+	github.com/joy12825/gf/v2 v2.7.6
 	github.com/lib/pq v1.10.9
 )
 

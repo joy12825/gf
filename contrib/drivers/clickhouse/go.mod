@@ -4,8 +4,8 @@ go 1.18
 
 require (
 	github.com/ClickHouse/clickhouse-go/v2 v2.0.15
-	github.com/joy12825/gf/v2 v2.7.2
 	github.com/google/uuid v1.3.0
+	github.com/joy12825/gf/v2 v2.7.6
 	github.com/shopspring/decimal v1.3.1
 )
 

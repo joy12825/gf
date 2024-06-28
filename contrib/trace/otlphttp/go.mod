@@ -3,7 +3,7 @@ module github.com/joy12825/gf/contrib/trace/otlphttp/v2
 go 1.18
 
 require (
-	github.com/joy12825/gf/v2 v2.7.2
+	github.com/joy12825/gf/v2 v2.7.6
 	go.opentelemetry.io/otel v1.22.0
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.22.0
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp v1.22.0

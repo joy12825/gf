@@ -3,7 +3,7 @@ module github.com/joy12825/gf/contrib/nosql/redis/v2
 go 1.18
 
 require (
-	github.com/joy12825/gf/v2 v2.7.2
+	github.com/joy12825/gf/v2 v2.7.6
 	github.com/redis/go-redis/v9 v9.2.1
 	go.opentelemetry.io/otel v1.14.0
 	go.opentelemetry.io/otel/trace v1.14.0

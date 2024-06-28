@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/apolloconfig/agollo/v4 v4.3.1
-	github.com/joy12825/gf/v2 v2.7.2
+	github.com/joy12825/gf/v2 v2.7.6
 )
 
 require (
