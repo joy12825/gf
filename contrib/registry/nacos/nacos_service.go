@@ -2,16 +2,16 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package nacos
 
 import (
 	"fmt"
 
-	"github.com/gogf/gf/v2/container/gmap"
-	"github.com/gogf/gf/v2/net/gsvc"
-	"github.com/gogf/gf/v2/text/gstr"
+	"github.com/joy12825/gf/v2/container/gmap"
+	"github.com/joy12825/gf/v2/net/gsvc"
+	"github.com/joy12825/gf/v2/text/gstr"
 	"github.com/nacos-group/nacos-sdk-go/v2/model"
 )
 

@@ -16,7 +16,8 @@ import (
 	"github.com/joy12825/gf/v2/internal/json"
 	"github.com/joy12825/gf/v2/internal/utils"
 	"github.com/joy12825/gf/v2/util/gconv/internal/localinterface"
-	"github.com/joy12825/gf/v2/util/gconv/internal/structcache")
+	"github.com/joy12825/gf/v2/util/gconv/internal/structcache"
+)
 
 // Struct maps the params key-value pairs to the corresponding struct object's attributes.
 // The third parameter `mapping` is unnecessary, indicating the mapping rules between the
@@ -458,7 +459,7 @@ func bindVarToStructField(
 		return nil
 	}
 	// Try to call custom converter.
-	// Issue: https://github.com/gogf/gf/issues/3099
+	// Issue: https://github.com/joy12825/gf/issues/3099
 	var (
 		customConverterInput reflect.Value
 		ok                   bool

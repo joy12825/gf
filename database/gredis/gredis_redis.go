@@ -47,7 +47,7 @@ const (
 	errorNilRedis = `the Redis object is nil`
 )
 
-const errorNilAdapter = `redis adapter is not set, missing configuration or adapter register? possible reference: https://github.com/gogf/gf/tree/master/contrib/nosql/redis`
+const errorNilAdapter = `redis adapter is not set, missing configuration or adapter register? possible reference: https://github.com/joy12825/gf/tree/master/contrib/nosql/redis`
 
 // initGroup initializes the group object of redis.
 func (r *Redis) initGroup() *Redis {

@@ -5,7 +5,7 @@ pack: pack.template-single pack.template-mono pack.template-mono-app
 pack.template-single:
 	@rm -fr temp
 	@mkdir temp || exit 0
-	@cd temp && git clone https://github.com/gogf/template-single
+	@cd temp && git clone https://github.com/joy12825/template-single
 	@rm -fr temp/template-single/.git
 	@cd temp && gf pack template-single ../internal/packed/template-single.go -n=packed -y
 	@rm -fr temp
@@ -13,7 +13,7 @@ pack.template-single:
 pack.template-mono:
 	@rm -fr temp
 	@mkdir temp || exit 0
-	@cd temp && git clone https://github.com/gogf/template-mono
+	@cd temp && git clone https://github.com/joy12825/template-mono
 	@rm -fr temp/template-mono/.git
 	@cd temp && gf pack template-mono ../internal/packed/template-mono.go -n=packed -y
 	@rm -fr temp
@@ -24,7 +24,7 @@ pack.template-mono:
 pack.template-mono-app:
 	@rm -fr temp
 	@mkdir temp || exit 0
-	@cd temp && git clone https://github.com/gogf/template-single
+	@cd temp && git clone https://github.com/joy12825/template-single
 	@cd temp && mv template-single template-mono-app
 	@rm -fr temp/template-mono-app/.git
 	@rm -fr temp/template-mono-app/.gitattributes

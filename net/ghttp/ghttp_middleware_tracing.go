@@ -24,7 +24,7 @@ import (
 )
 
 const (
-	instrumentName                              = "github.com/gogf/gf/v2/net/ghttp.Server"
+	instrumentName                              = "github.com/joy12825/gf/v2/net/ghttp.Server"
 	tracingEventHttpRequest                     = "http.request"
 	tracingEventHttpRequestHeaders              = "http.request.headers"
 	tracingEventHttpRequestBaggage              = "http.request.baggage"

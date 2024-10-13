@@ -16,7 +16,7 @@ jobs:
       - name: Mirror GitHub to Gitee
         uses: Yikun/hub-mirror-action@v1.4
         with:
-          src: github/gogf
+          src: github/joy12825
           dst: gitee/johng
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }}

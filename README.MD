@@ -6,17 +6,17 @@
 [![Go Reference](https://pkg.go.dev/badge/github.com/joy12825/gf/v2.svg)](https://pkg.go.dev/github.com/joy12825/gf/v2)
 [![GoFrame CI](https://github.com/joy12825/gf/actions/workflows/ci-main.yml/badge.svg)](https://github.com/joy12825/gf/actions/workflows/ci-main.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/joy12825/gf/v2)](https://goreportcard.com/report/github.com/joy12825/gf/v2)
-[![Code Coverage](https://codecov.io/gh/gogf/gf/branch/master/graph/badge.svg)](https://codecov.io/gh/gogf/gf)
+[![Code Coverage](https://codecov.io/gh/joy12825/gf/branch/master/graph/badge.svg)](https://codecov.io/gh/joy12825/gf)
 [![Production Ready](https://img.shields.io/badge/production-ready-blue.svg?style=flat)](https://github.com/joy12825/gf)
-[![License](https://img.shields.io/github/license/gogf/gf.svg?style=flat)](https://github.com/joy12825/gf)
+[![License](https://img.shields.io/github/license/joy12825/gf.svg?style=flat)](https://github.com/joy12825/gf)
 
-[![Release](https://img.shields.io/github/v/release/gogf/gf?style=flat)](https://github.com/joy12825/gf/releases)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/gogf/gf?style=flat)](https://github.com/joy12825/gf/pulls)
-[![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/gogf/gf?style=flat)](https://github.com/joy12825/gf/pulls?q=is%3Apr+is%3Aclosed)
-[![GitHub issues](https://img.shields.io/github/issues/gogf/gf?style=flat)](https://github.com/joy12825/gf/issues)
-[![GitHub closed issues](https://img.shields.io/github/issues-closed/gogf/gf?style=flat)](https://github.com/joy12825/gf/issues?q=is%3Aissue+is%3Aclosed)
-![Stars](https://img.shields.io/github/stars/gogf/gf?style=flat)
-![Forks](https://img.shields.io/github/forks/gogf/gf?style=flat)
+[![Release](https://img.shields.io/github/v/release/joy12825/gf?style=flat)](https://github.com/joy12825/gf/releases)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/joy12825/gf?style=flat)](https://github.com/joy12825/gf/pulls)
+[![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/joy12825/gf?style=flat)](https://github.com/joy12825/gf/pulls?q=is%3Apr+is%3Aclosed)
+[![GitHub issues](https://img.shields.io/github/issues/joy12825/gf?style=flat)](https://github.com/joy12825/gf/issues)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/joy12825/gf?style=flat)](https://github.com/joy12825/gf/issues?q=is%3Aissue+is%3Aclosed)
+![Stars](https://img.shields.io/github/stars/joy12825/gf?style=flat)
+![Forks](https://img.shields.io/github/forks/joy12825/gf?style=flat)
 
 </div>
 
@@ -63,7 +63,7 @@ golang version >= 1.20
 
 - Chinese Official Site(中文官网): [https://goframe.org](https://goframe.org/display/gf)
 - Chinese Pages Document(中文镜像文档): [https://pages.goframe.org](https://pages.goframe.org)
-- Chinese Offline Document(中文离线文档): [https://github.com/gogf/goframe.org-pdf](https://github.com/gogf/goframe.org-pdf)
+- Chinese Offline Document(中文离线文档): [https://github.com/joy12825/goframe.org-pdf](https://github.com/joy12825/goframe.org-pdf)
 - GoDoc API: [https://pkg.go.dev/github.com/joy12825/gf/v2](https://pkg.go.dev/github.com/joy12825/gf/v2)
 
 # License
@@ -89,7 +89,7 @@ golang version >= 1.20
 # Contributors
 
 This project exists thanks to all the people who contribute. [[Contributors](https://github.com/joy12825/gf/graphs/contributors)].
-<a href="https://github.com/joy12825/gf/graphs/contributors"><img src="https://contributors-img.web.app/image?repo=gogf/gf" /></a>
+<a href="https://github.com/joy12825/gf/graphs/contributors"><img src="https://contributors-img.web.app/image?repo=joy12825/gf" /></a>
 
 # Donators
 

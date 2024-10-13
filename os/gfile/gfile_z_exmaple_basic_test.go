@@ -414,7 +414,7 @@ func ExampleSelfPath() {
 	fmt.Println(gfile.SelfPath())
 
 	// May Output:
-	// xxx/___github_com_gogf_gf_v2_os_gfile__ExampleSelfPath
+	// xxx/___github_com_joy12825_gf_v2_os_gfile__ExampleSelfPath
 }
 
 func ExampleSelfName() {
@@ -423,7 +423,7 @@ func ExampleSelfName() {
 	fmt.Println(gfile.SelfName())
 
 	// May Output:
-	// ___github_com_gogf_gf_v2_os_gfile__ExampleSelfName
+	// ___github_com_joy12825_gf_v2_os_gfile__ExampleSelfName
 }
 
 func ExampleSelfDir() {

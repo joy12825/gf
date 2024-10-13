@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 // Package structcache provides struct and field info cache feature to enhance performance for struct converting.
 package structcache
@@ -10,7 +10,7 @@ package structcache
 import (
 	"reflect"
 
-	"github.com/gogf/gf/v2/util/gconv/internal/localinterface"
+	"github.com/joy12825/gf/v2/util/gconv/internal/localinterface"
 )
 
 var (

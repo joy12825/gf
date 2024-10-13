@@ -21,7 +21,7 @@ import (
 	"github.com/joy12825/gf/v2/errors/gcode"
 	"github.com/joy12825/gf/v2/errors/gerror"
 	"github.com/joy12825/gf/v2/internal/intlog"
-	"github.com/gogf/gf/v2/os/gfile"
+	"github.com/joy12825/gf/v2/os/gfile"
 	"github.com/joy12825/gf/v2/os/glog"
 	"github.com/joy12825/gf/v2/os/gproc"
 	"github.com/joy12825/gf/v2/os/gtime"

@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package gvalid_test
 
@@ -12,12 +12,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gogf/gf/v2/errors/gerror"
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/net/ghttp"
-	"github.com/gogf/gf/v2/test/gtest"
-	"github.com/gogf/gf/v2/util/guid"
-	"github.com/gogf/gf/v2/util/gvalid"
+	"github.com/joy12825/gf/v2/errors/gerror"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/net/ghttp"
+	"github.com/joy12825/gf/v2/test/gtest"
+	"github.com/joy12825/gf/v2/util/guid"
+	"github.com/joy12825/gf/v2/util/gvalid"
 )
 
 type Foo struct {
@@ -31,7 +31,7 @@ type Baz struct {
 	BazKey string `p:"baz_key" v:"required"`
 }
 
-// https://github.com/gogf/gf/issues/2503
+// https://github.com/joy12825/gf/issues/2503
 func Test_Issue2503(t *testing.T) {
 	foo := &Foo{
 		Bar: &Bar{BarKey: "value"},
@@ -90,7 +90,7 @@ func (Issue3636Hello) Say(ctx context.Context, req *Issue3636HelloReq) (res *Iss
 	return
 }
 
-// https://github.com/gogf/gf/issues/3636
+// https://github.com/joy12825/gf/issues/3636
 func Test_Issue3636(t *testing.T) {
 	s := g.Server(guid.S())
 	s.Use(ghttp.MiddlewareHandlerResponse)

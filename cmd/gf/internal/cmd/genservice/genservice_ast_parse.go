@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package genservice
 
@@ -11,14 +11,14 @@ import (
 	"go/parser"
 	"go/token"
 
-	"github.com/gogf/gf/v2/os/gfile"
-	"github.com/gogf/gf/v2/text/gstr"
+	"github.com/joy12825/gf/v2/os/gfile"
+	"github.com/joy12825/gf/v2/text/gstr"
 )
 
 type pkgItem struct {
 	Alias     string `eg:"gdbas"`
-	Path      string `eg:"github.com/gogf/gf/v2/database/gdb"`
-	RawImport string `eg:"gdbas github.com/gogf/gf/v2/database/gdb"`
+	Path      string `eg:"github.com/joy12825/gf/v2/database/gdb"`
+	RawImport string `eg:"gdbas github.com/joy12825/gf/v2/database/gdb"`
 }
 
 type funcItem struct {
@@ -100,8 +100,8 @@ func (c CGenService) parseImportPackages(node *ast.ImportSpec) (packages pkgItem
 }
 
 // getRealAlias retrieves the real alias of the package.
-// If package is "github.com/gogf/gf", the alias is "gf".
-// If package is "github.com/gogf/gf/v2", the alias is "gf" instead of "v2".
+// If package is "github.com/joy12825/gf", the alias is "gf".
+// If package is "github.com/joy12825/gf/v2", the alias is "gf" instead of "v2".
 func (c CGenService) getRealAlias(importPath string) (pkgName string) {
 	importPath = gstr.Trim(importPath, `"`)
 	parts := gstr.Split(importPath, "/")

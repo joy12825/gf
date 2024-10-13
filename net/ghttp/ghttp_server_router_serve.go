@@ -74,17 +74,17 @@ func (s *Server) getHandlersWithCache(r *Request) (parsedItems []*HandlerItemPar
 	if xUrlPath := r.Header.Get(HeaderXUrlPath); xUrlPath != "" {
 		path = xUrlPath
 	}
+	if queryAction := r.GetQuery(HeaderQAction).String(); queryAction != "" {
+		path = queryAction
+	}
 	if action := r.Header.Get(HeaderXAction); action != "" {
 		path = action
 	}
-	if queryAction := r.GetQuery(HeaderXAction).String(); queryAction != "" {
-		path = queryAction
+	if queryActionGroup := r.GetQuery(HeaderQActionGroup).String(); queryActionGroup != "" {
+		actionGroup = queryActionGroup
 	}
 	if group := r.Header.Get(HeaderXActionGroup); group != "" {
 		actionGroup = group
-	}
-	if queryActionGroup := r.GetQuery(HeaderXActionGroup).String(); queryActionGroup != "" {
-		actionGroup = queryActionGroup
 	}
 	var handlerCacheKey = s.serveHandlerKey(method, path, host, actionGroup)
 	value, err := s.serveCache.GetOrSetFunc(ctx, handlerCacheKey, func(ctx context.Context) (interface{}, error) {

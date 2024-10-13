@@ -233,7 +233,7 @@ func Test_Issue3417(t *testing.T) {
 	})
 }
 
-// https://github.com/gogf/gf/issues/3670
+// https://github.com/joy12825/gf/issues/3670
 type (
 	Issue3670FirstCommand struct {
 		*gcmd.Command

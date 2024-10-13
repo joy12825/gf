@@ -23,7 +23,7 @@ import (
 
 func main() {
 	gsvc.SetRegistry(zookeeper.New(
-		[]string{"127.0.0.1:2181"}, zookeeper.WithRootPath("/gogf"),
+		[]string{"127.0.0.1:2181"}, zookeeper.WithRootPath("/joy12825"),
     ))
 	
 	s := g.Server(`hello.svc`)
@@ -51,7 +51,7 @@ import (
 
 func main() {
 	gsvc.SetRegistry(zookeeper.New(
-		[]string{"127.0.0.1:2181"}, zookeeper.WithRootPath("/gogf"),
+		[]string{"127.0.0.1:2181"}, zookeeper.WithRootPath("/joy12825"),
 	))
 	gsel.SetBuilder(gsel.NewBuilderRoundRobin())
 

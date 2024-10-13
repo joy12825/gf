@@ -74,7 +74,7 @@ func Test_Gen_Service_Default(t *testing.T) {
 	})
 }
 
-// https://github.com/gogf/gf/issues/3328
+// https://github.com/joy12825/gf/issues/3328
 func Test_Issue3328(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		var (
@@ -117,7 +117,7 @@ func Test_Issue3328(t *testing.T) {
 	})
 }
 
-// https://github.com/gogf/gf/issues/3835
+// https://github.com/joy12825/gf/issues/3835
 func Test_Issue3835(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		var (

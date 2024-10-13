@@ -597,7 +597,7 @@ func (Issue3789) Say(ctx context.Context, req *Issue3789Req) (res *Issue3789Res,
 	return
 }
 
-// https://github.com/gogf/gf/issues/3789
+// https://github.com/joy12825/gf/issues/3789
 func Test_Issue3789(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		s := g.Server()

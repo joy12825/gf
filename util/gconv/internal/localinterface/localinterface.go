@@ -2,12 +2,12 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 // Package localinterface defines some interfaces for converting usage.
 package localinterface
 
-import "github.com/gogf/gf/v2/os/gtime"
+import "github.com/joy12825/gf/v2/os/gtime"
 
 // IVal is used for type assert api for String().
 type IVal interface {

@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package structcache
 
@@ -11,9 +11,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gogf/gf/v2/internal/utils"
-	"github.com/gogf/gf/v2/os/gtime"
-	"github.com/gogf/gf/v2/util/gtag"
+	"github.com/joy12825/gf/v2/internal/utils"
+	"github.com/joy12825/gf/v2/os/gtime"
+	"github.com/joy12825/gf/v2/util/gtag"
 )
 
 // CommonConverter holds some converting functions of common types for internal usage.
@@ -143,7 +143,7 @@ func parseStructToCachedStructInfo(
 		// When the structure is nested deeply, it may lead to bugs,
 		// which are caused by the slice expansion mechanism
 		// So it is necessary to allocate a separate index for each field
-		// See details https://github.com/gogf/gf/issues/3789
+		// See details https://github.com/joy12825/gf/issues/3789
 		cachedStructInfo.AddField(structField, append(copyFieldIndexes, i), priorityTagArray)
 	}
 }

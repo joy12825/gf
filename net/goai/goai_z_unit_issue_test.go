@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/gogf/gf.
+// You can obtain one at https://github.com/joy12825/gf.
 
 package goai_test
 
@@ -12,11 +12,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gogf/gf/v2/encoding/gjson"
-	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/net/ghttp"
-	"github.com/gogf/gf/v2/test/gtest"
-	"github.com/gogf/gf/v2/util/guid"
+	"github.com/joy12825/gf/v2/encoding/gjson"
+	"github.com/joy12825/gf/v2/frame/g"
+	"github.com/joy12825/gf/v2/net/ghttp"
+	"github.com/joy12825/gf/v2/test/gtest"
+	"github.com/joy12825/gf/v2/util/guid"
 )
 
 var ctx = context.Background()
@@ -47,7 +47,7 @@ func (Issue3664) RequiredTag(
 	return
 }
 
-// https://github.com/gogf/gf/issues/3664
+// https://github.com/joy12825/gf/issues/3664
 func Test_Issue3664(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		s := g.Server(guid.S())
@@ -89,7 +89,7 @@ func (Issue3135) Default(ctx context.Context, req *Issue3135DefaultReq) (res *Is
 	return
 }
 
-// https://github.com/gogf/gf/issues/3135
+// https://github.com/joy12825/gf/issues/3135
 func Test_Issue3135(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		s := g.Server(guid.S())
@@ -109,7 +109,7 @@ func Test_Issue3135(t *testing.T) {
 
 		var (
 			api           = s.GetOpenApi()
-			reqPath       = "github.com.gogf.gf.v2.net.goai_test.Issue3135DefaultReq"
+			reqPath       = "github.com.joy12825.gf.v2.net.goai_test.Issue3135DefaultReq"
 			rgbType       = api.Components.Schemas.Get(reqPath).Value.Properties.Get("rgba").Value.Type
 			requiredArray = api.Components.Schemas.Get(reqPath).Value.Required
 		)

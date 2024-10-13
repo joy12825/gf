@@ -21,7 +21,7 @@ import (
 	"github.com/joy12825/gf/v2/util/gconv"
 )
 
-// https://github.com/gogf/gf/issues/1227
+// https://github.com/joy12825/gf/issues/1227
 func Test_Issue1227(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		type StructFromIssue1227 struct {
@@ -368,7 +368,7 @@ func TestIssue3006(t *testing.T) {
 	})
 }
 
-// https://github.com/gogf/gf/issues/3731
+// https://github.com/joy12825/gf/issues/3731
 func Test_Issue3731(t *testing.T) {
 	type Data struct {
 		Doc map[string]interface{} `json:"doc"`
@@ -388,7 +388,7 @@ func Test_Issue3731(t *testing.T) {
 	})
 }
 
-// https://github.com/gogf/gf/issues/3764
+// https://github.com/joy12825/gf/issues/3764
 func Test_Issue3764(t *testing.T) {
 	type T struct {
 		True     bool  `json:"true"`
@@ -415,7 +415,7 @@ func Test_Issue3764(t *testing.T) {
 	})
 }
 
-// https://github.com/gogf/gf/issues/3789
+// https://github.com/joy12825/gf/issues/3789
 func Test_Issue3789(t *testing.T) {
 	type ItemSecondThird struct {
 		SecondID uint64 `json:"secondId,string"`
@@ -447,7 +447,7 @@ func Test_Issue3789(t *testing.T) {
 	})
 }
 
-// https://github.com/gogf/gf/issues/3797
+// https://github.com/joy12825/gf/issues/3797
 func Test_Issue3797(t *testing.T) {
 	type Option struct {
 		F1 int
@@ -475,7 +475,7 @@ func Test_Issue3797(t *testing.T) {
 	})
 }
 
-// https://github.com/gogf/gf/issues/3800
+// https://github.com/joy12825/gf/issues/3800
 func Test_Issue3800(t *testing.T) {
 	// might be random assignment in converting,
 	// it here so runs multiple times to reproduce the issue.

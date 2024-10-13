@@ -38,6 +38,6 @@ require (
 )
 
 replace (
-	github.com/ClickHouse/clickhouse-go/v2 => github.com/gogf/clickhouse-go/v2 v2.0.15-compatible
+	github.com/ClickHouse/clickhouse-go/v2 => github.com/joy12825/clickhouse-go/v2 v2.0.15-compatible
 	github.com/joy12825/gf/v2 => ../../../
 )

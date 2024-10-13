@@ -18,7 +18,7 @@ import (
 
 // TestRegistry TestRegistryManyService
 func TestRegistry(t *testing.T) {
-	r := New([]string{"127.0.0.1:2181"}, WithRootPath("/gogf"))
+	r := New([]string{"127.0.0.1:2181"}, WithRootPath("/joy12825"))
 	ctx := context.Background()
 
 	svc := &gsvc.LocalService{
@@ -41,7 +41,7 @@ func TestRegistry(t *testing.T) {
 
 // TestRegistryMany TestRegistryManyService
 func TestRegistryMany(t *testing.T) {
-	r := New([]string{"127.0.0.1:2181"}, WithRootPath("/gogf"))
+	r := New([]string{"127.0.0.1:2181"}, WithRootPath("/joy12825"))
 
 	svc := &gsvc.LocalService{
 		Name:      "goframe-provider-1-tcp",
@@ -95,7 +95,7 @@ func TestRegistryMany(t *testing.T) {
 
 // TestGetService Test GetService
 func TestGetService(t *testing.T) {
-	r := New([]string{"127.0.0.1:2181"}, WithRootPath("/gogf"))
+	r := New([]string{"127.0.0.1:2181"}, WithRootPath("/joy12825"))
 	ctx := context.Background()
 
 	svc := &gsvc.LocalService{
@@ -131,7 +131,7 @@ func TestGetService(t *testing.T) {
 
 // TestWatch Test Watch
 func TestWatch(t *testing.T) {
-	r := New([]string{"127.0.0.1:2181"}, WithRootPath("/gogf"))
+	r := New([]string{"127.0.0.1:2181"}, WithRootPath("/joy12825"))
 
 	ctx := gctx.New()
 

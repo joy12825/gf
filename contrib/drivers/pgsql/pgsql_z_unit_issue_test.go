@@ -104,7 +104,7 @@ func Test_Issue3632(t *testing.T) {
 	})
 }
 
-// https://github.com/gogf/gf/issues/3671
+// https://github.com/joy12825/gf/issues/3671
 func Test_Issue3671(t *testing.T) {
 	type SubMember struct {
 		Seven string
@@ -143,7 +143,7 @@ func Test_Issue3671(t *testing.T) {
 	})
 }
 
-// https://github.com/gogf/gf/issues/3668
+// https://github.com/joy12825/gf/issues/3668
 func Test_Issue3668(t *testing.T) {
 	type Issue3668 struct {
 		Text   interface{}

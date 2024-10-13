@@ -3,8 +3,8 @@ package issue3835
 import (
 	"context"
 
-	"github.com/gogf/gf/cmd/gf/v2/internal/cmd/testdata/issue/3835/service"
-	"github.com/gogf/gf/contrib/drivers/mysql/v2"
+	"github.com/joy12825/gf/cmd/gf/v2/internal/cmd/testdata/issue/3835/service"
+	"github.com/joy12825/gf/contrib/drivers/mysql/v2"
 )
 
 func init() {
