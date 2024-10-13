@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/joy12825/gf.
+// You can obtain one at https://github.com/gogf/gf.
 
 package pgsql
 
@@ -11,25 +11,31 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/joy12825/gf/v2/database/gdb"
-	"github.com/joy12825/gf/v2/text/gregex"
-	"github.com/joy12825/gf/v2/text/gstr"
-	"github.com/joy12825/gf/v2/util/gconv"
+	"github.com/gogf/gf/v2/database/gdb"
+	"github.com/gogf/gf/v2/frame/g"
+	"github.com/gogf/gf/v2/text/gregex"
+	"github.com/gogf/gf/v2/text/gstr"
+	"github.com/gogf/gf/v2/util/gconv"
 )
 
 // ConvertValueForField converts value to database acceptable value.
 func (d *Driver) ConvertValueForField(ctx context.Context, fieldType string, fieldValue interface{}) (interface{}, error) {
-	var (
-		fieldValueKind = reflect.TypeOf(fieldValue).Kind()
-	)
+	if g.IsNil(fieldValue) {
+		return d.Core.ConvertValueForField(ctx, fieldType, fieldValue)
+	}
+
+	var fieldValueKind = reflect.TypeOf(fieldValue).Kind()
 
 	if fieldValueKind == reflect.Slice {
-		fieldValue = gstr.ReplaceByMap(gconv.String(fieldValue),
-			map[string]string{
-				"[": "{",
-				"]": "}",
-			},
-		)
+		// For pgsql, json or jsonb require '[]'
+		if !gstr.Contains(fieldType, "json") {
+			fieldValue = gstr.ReplaceByMap(gconv.String(fieldValue),
+				map[string]string{
+					"[": "{",
+					"]": "}",
+				},
+			)
+		}
 	}
 	return d.Core.ConvertValueForField(ctx, fieldType, fieldValue)
 }

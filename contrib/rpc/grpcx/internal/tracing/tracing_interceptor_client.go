@@ -2,13 +2,12 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/joy12825/gf.
+// You can obtain one at https://github.com/gogf/gf.
 
 package tracing
 
 import (
 	"context"
-	"github.com/joy12825/gf/v2"
 
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
@@ -19,10 +18,10 @@ import (
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/status"
 
-	"github.com/joy12825/gf/contrib/rpc/grpcx/v2/internal/grpcctx"
-	"github.com/joy12825/gf/contrib/rpc/grpcx/v2/internal/utils"
-	"github.com/joy12825/gf/v2/net/gtrace"
-	"github.com/joy12825/gf/v2/util/gconv"
+	"github.com/gogf/gf/contrib/rpc/grpcx/v2/internal/grpcctx"
+	"github.com/gogf/gf/v2"
+	"github.com/gogf/gf/v2/net/gtrace"
+	"github.com/gogf/gf/v2/util/gconv"
 )
 
 // UnaryClientInterceptor returns a grpc.UnaryClientInterceptor suitable
@@ -59,24 +58,9 @@ func UnaryClientInterceptor(ctx context.Context, method string, req, reply inter
 	span.AddEvent(tracingEventGrpcRequest, trace.WithAttributes(
 		attribute.String(tracingEventGrpcRequestBaggage, gconv.String(gtrace.GetBaggageMap(ctx))),
 		attribute.String(tracingEventGrpcMetadataOutgoing, gconv.String(grpcctx.Ctx{}.OutgoingMap(ctx))),
-		attribute.String(
-			tracingEventGrpcRequestMessage,
-			utils.MarshalMessageToJsonStringForTracing(
-				req, "Request", tracingMaxContentLogSize,
-			),
-		),
 	))
 
 	err := invoker(ctx, method, req, reply, cc, callOpts...)
-
-	span.AddEvent(tracingEventGrpcResponse, trace.WithAttributes(
-		attribute.String(
-			tracingEventGrpcResponseMessage,
-			utils.MarshalMessageToJsonStringForTracing(
-				reply, "Response", tracingMaxContentLogSize,
-			),
-		),
-	))
 
 	if err != nil {
 		s, _ := status.FromError(err)

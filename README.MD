@@ -56,7 +56,7 @@ go install github.com/joy12825/gf/cmd/gf/v2@latest
 # Limitation
 
 ```
-golang version >= 1.18
+golang version >= 1.20
 ```
 
 # Documentation

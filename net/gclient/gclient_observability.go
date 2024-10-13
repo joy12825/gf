@@ -9,8 +9,6 @@ package gclient
 import (
 	"context"
 	"fmt"
-	"github.com/joy12825/gf/v2"
-	"io"
 	"net/http"
 	"net/http/httptrace"
 
@@ -20,8 +18,8 @@ import (
 	"go.opentelemetry.io/otel/propagation"
 	"go.opentelemetry.io/otel/trace"
 
+	"github.com/joy12825/gf/v2"
 	"github.com/joy12825/gf/v2/internal/httputil"
-	"github.com/joy12825/gf/v2/internal/utils"
 	"github.com/joy12825/gf/v2/net/gtrace"
 	"github.com/joy12825/gf/v2/os/gctx"
 	"github.com/joy12825/gf/v2/os/gmetric"
@@ -39,10 +37,8 @@ const (
 	tracingEventHttpRequest                     = "http.request"
 	tracingEventHttpRequestHeaders              = "http.request.headers"
 	tracingEventHttpRequestBaggage              = "http.request.baggage"
-	tracingEventHttpRequestBody                 = "http.request.body"
 	tracingEventHttpResponse                    = "http.response"
 	tracingEventHttpResponseHeaders             = "http.response.headers"
-	tracingEventHttpResponseBody                = "http.response.body"
 	tracingMiddlewareHandled        gctx.StrKey = `MiddlewareClientTracingHandled`
 )
 
@@ -102,17 +98,11 @@ func internalMiddlewareObservability(c *Client, r *http.Request) (response *Resp
 		return
 	}
 
-	reqBodyContentBytes, _ := io.ReadAll(response.Body)
-	response.Body = utils.NewReadCloser(reqBodyContentBytes, false)
-
-	resBodyContent, err := gtrace.SafeContentForHttp(reqBodyContentBytes, response.Header)
-	if err != nil {
-		span.SetStatus(codes.Error, fmt.Sprintf(`converting safe content failed: %s`, err.Error()))
-	}
-
 	span.AddEvent(tracingEventHttpResponse, trace.WithAttributes(
-		attribute.String(tracingEventHttpResponseHeaders, gconv.String(httputil.HeaderToMap(response.Header))),
-		attribute.String(tracingEventHttpResponseBody, resBodyContent),
+		attribute.String(
+			tracingEventHttpResponseHeaders,
+			gconv.String(httputil.HeaderToMap(response.Header)),
+		),
 	))
 	return
 }

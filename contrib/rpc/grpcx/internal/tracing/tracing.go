@@ -29,12 +29,10 @@ const (
 	tracingInstrumentGrpcClient      = "github.com/joy12825/gf/contrib/rpc/grpcx/v2/krpc.GrpcClient"
 	tracingInstrumentGrpcServer      = "github.com/joy12825/gf/contrib/rpc/grpcx/v2/krpc.GrpcServer"
 	tracingEventGrpcRequest          = "grpc.request"
-	tracingEventGrpcRequestMessage   = "grpc.request.message"
 	tracingEventGrpcRequestBaggage   = "grpc.request.baggage"
 	tracingEventGrpcMetadataOutgoing = "grpc.metadata.outgoing"
 	tracingEventGrpcMetadataIncoming = "grpc.metadata.incoming"
 	tracingEventGrpcResponse         = "grpc.response"
-	tracingEventGrpcResponseMessage  = "grpc.response.message"
 )
 
 type metadataSupplier struct {

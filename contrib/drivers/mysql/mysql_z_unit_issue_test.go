@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/joy12825/gf.
+// You can obtain one at https://github.com/gogf/gf.
 
 package mysql_test
 
@@ -13,17 +13,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/joy12825/gf/v2/database/gdb"
-	"github.com/joy12825/gf/v2/frame/g"
-	"github.com/joy12825/gf/v2/os/gtime"
-	"github.com/joy12825/gf/v2/test/gtest"
-	"github.com/joy12825/gf/v2/text/gregex"
-	"github.com/joy12825/gf/v2/text/gstr"
-	"github.com/joy12825/gf/v2/util/gmeta"
-	"github.com/joy12825/gf/v2/util/guid"
+	"github.com/gogf/gf/v2/database/gdb"
+	"github.com/gogf/gf/v2/frame/g"
+	"github.com/gogf/gf/v2/os/gtime"
+	"github.com/gogf/gf/v2/test/gtest"
+	"github.com/gogf/gf/v2/text/gregex"
+	"github.com/gogf/gf/v2/text/gstr"
+	"github.com/gogf/gf/v2/util/gmeta"
+	"github.com/gogf/gf/v2/util/guid"
 )
 
-// https://github.com/joy12825/gf/issues/1934
+// https://github.com/gogf/gf/issues/1934
 func Test_Issue1934(t *testing.T) {
 	table := createInitTable()
 	defer dropTable(table)
@@ -35,7 +35,7 @@ func Test_Issue1934(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/1570
+// https://github.com/gogf/gf/issues/1570
 func Test_Issue1570(t *testing.T) {
 	var (
 		tableUser       = "user_" + gtime.TimestampMicroStr()
@@ -163,7 +163,7 @@ CREATE TABLE %s (
 	})
 }
 
-// https://github.com/joy12825/gf/issues/1401
+// https://github.com/gogf/gf/issues/1401
 func Test_Issue1401(t *testing.T) {
 	var (
 		table1 = "parcels"
@@ -205,7 +205,7 @@ func Test_Issue1401(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/1412
+// https://github.com/gogf/gf/issues/1412
 func Test_Issue1412(t *testing.T) {
 	var (
 		table1 = "parcels"
@@ -267,7 +267,7 @@ func Test_Issue1412(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/1002
+// https://github.com/gogf/gf/issues/1002
 func Test_Issue1002(t *testing.T) {
 	table := createTable()
 	defer dropTable(table)
@@ -341,7 +341,7 @@ func Test_Issue1002(t *testing.T) {
 	// })
 }
 
-// https://github.com/joy12825/gf/issues/1700
+// https://github.com/gogf/gf/issues/1700
 func Test_Issue1700(t *testing.T) {
 	table := "user_" + gtime.Now().TimestampNanoStr()
 	if _, err := db.Exec(ctx, fmt.Sprintf(`
@@ -389,7 +389,7 @@ func Test_Issue1700(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/1701
+// https://github.com/gogf/gf/issues/1701
 func Test_Issue1701(t *testing.T) {
 	table := createInitTable()
 	defer dropTable(table)
@@ -400,7 +400,7 @@ func Test_Issue1701(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/1733
+// https://github.com/gogf/gf/issues/1733
 func Test_Issue1733(t *testing.T) {
 	table := "user_" + guid.S()
 	if _, err := db.Exec(ctx, fmt.Sprintf(`
@@ -431,7 +431,46 @@ func Test_Issue1733(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/2105
+// https://github.com/gogf/gf/issues/2012
+func Test_Issue2012(t *testing.T) {
+	table := "time_only_" + guid.S()
+	if _, err := db.Exec(ctx, fmt.Sprintf(`
+		CREATE TABLE %s(
+			id int(8) unsigned zerofill NOT NULL AUTO_INCREMENT,
+			time_only time,
+			PRIMARY KEY (id)
+	    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+	    `, table,
+	)); err != nil {
+		gtest.AssertNil(err)
+	}
+	defer dropTable(table)
+
+	type TimeOnly struct {
+		Id       int         `json:"id"`
+		TimeOnly *gtime.Time `json:"timeOnly"`
+	}
+
+	gtest.C(t, func(t *gtest.T) {
+		timeOnly := gtime.New("15:04:05")
+		m := db.Model(table)
+
+		_, err := m.Insert(TimeOnly{
+			TimeOnly: gtime.New(timeOnly),
+		})
+		t.AssertNil(err)
+
+		_, err = m.Insert(g.Map{
+			"time_only": timeOnly,
+		})
+		t.AssertNil(err)
+
+		_, err = m.Insert("time_only", timeOnly)
+		t.AssertNil(err)
+	})
+}
+
+// https://github.com/gogf/gf/issues/2105
 func Test_Issue2105(t *testing.T) {
 	table := "issue2105"
 	array := gstr.SplitAndTrim(gtest.DataContent(`issue2105.sql`), ";")
@@ -461,7 +500,7 @@ func Test_Issue2105(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/2231
+// https://github.com/gogf/gf/issues/2231
 func Test_Issue2231(t *testing.T) {
 	var (
 		pattern = `(\w+):([\w\-]*):(.*?)@(\w+?)\((.+?)\)/{0,1}([^\?]*)\?{0,1}(.*)`
@@ -480,7 +519,7 @@ func Test_Issue2231(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/2339
+// https://github.com/gogf/gf/issues/2339
 func Test_Issue2339(t *testing.T) {
 	table := createInitTable()
 	defer dropTable(table)
@@ -500,7 +539,7 @@ func Test_Issue2339(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/2356
+// https://github.com/gogf/gf/issues/2356
 func Test_Issue2356(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		table := "demo_" + guid.S()
@@ -525,7 +564,7 @@ func Test_Issue2356(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/2338
+// https://github.com/gogf/gf/issues/2338
 func Test_Issue2338(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		table1 := "demo_" + guid.S()
@@ -636,7 +675,7 @@ CREATE TABLE %s (
 	})
 }
 
-// https://github.com/joy12825/gf/issues/2427
+// https://github.com/gogf/gf/issues/2427
 func Test_Issue2427(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		table := "demo_" + guid.S()
@@ -667,7 +706,7 @@ CREATE TABLE %s (
 	})
 }
 
-// https://github.com/joy12825/gf/issues/2561
+// https://github.com/gogf/gf/issues/2561
 func Test_Issue2561(t *testing.T) {
 	table := createTable()
 	defer dropTable(table)
@@ -729,7 +768,7 @@ func Test_Issue2561(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/2439
+// https://github.com/gogf/gf/issues/2439
 func Test_Issue2439(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		array := gstr.SplitAndTrim(gtest.DataContent(`issue2439.sql`), ";")
@@ -763,7 +802,7 @@ func Test_Issue2439(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/2782
+// https://github.com/gogf/gf/issues/2782
 func Test_Issue2787(t *testing.T) {
 	table := createTable()
 	defer dropTable(table)
@@ -800,7 +839,7 @@ func Test_Issue2787(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/2907
+// https://github.com/gogf/gf/issues/2907
 func Test_Issue2907(t *testing.T) {
 	table := createInitTable()
 	defer dropTable(table)
@@ -825,7 +864,7 @@ func Test_Issue2907(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/3086
+// https://github.com/gogf/gf/issues/3086
 func Test_Issue3086(t *testing.T) {
 	table := "issue3086_user"
 	array := gstr.SplitAndTrim(gtest.DataContent(`issue3086.sql`), ";")
@@ -884,7 +923,7 @@ func Test_Issue3086(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/3204
+// https://github.com/gogf/gf/issues/3204
 func Test_Issue3204(t *testing.T) {
 	table := createInitTable()
 	defer dropTable(table)
@@ -970,7 +1009,7 @@ func Test_Issue3204(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/3218
+// https://github.com/gogf/gf/issues/3218
 func Test_Issue3218(t *testing.T) {
 	table := "issue3218_sys_config"
 	array := gstr.SplitAndTrim(gtest.DataContent(`issue3218.sql`), ";")
@@ -1001,7 +1040,7 @@ func Test_Issue3218(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/2552
+// https://github.com/gogf/gf/issues/2552
 func Test_Issue2552_ClearTableFieldsAll(t *testing.T) {
 	table := createTable()
 	defer dropTable(table)
@@ -1024,7 +1063,7 @@ func Test_Issue2552_ClearTableFieldsAll(t *testing.T) {
 		ctx = context.Background()
 		sqlArray, err = gdb.CatchSQL(ctx, func(ctx context.Context) error {
 			one, err := db.Model(table).Ctx(ctx).One()
-			t.Assert(len(one), 5)
+			t.Assert(len(one), 6)
 			return err
 		})
 		t.AssertNil(err)
@@ -1039,7 +1078,7 @@ func Test_Issue2552_ClearTableFieldsAll(t *testing.T) {
 		ctx = context.Background()
 		sqlArray, err = gdb.CatchSQL(ctx, func(ctx context.Context) error {
 			one, err := db.Model(table).Ctx(ctx).One()
-			t.Assert(len(one), 4)
+			t.Assert(len(one), 5)
 			return err
 		})
 		t.AssertNil(err)
@@ -1047,7 +1086,7 @@ func Test_Issue2552_ClearTableFieldsAll(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/2552
+// https://github.com/gogf/gf/issues/2552
 func Test_Issue2552_ClearTableFields(t *testing.T) {
 	table := createTable()
 	defer dropTable(table)
@@ -1070,7 +1109,7 @@ func Test_Issue2552_ClearTableFields(t *testing.T) {
 		ctx = context.Background()
 		sqlArray, err = gdb.CatchSQL(ctx, func(ctx context.Context) error {
 			one, err := db.Model(table).Ctx(ctx).One()
-			t.Assert(len(one), 5)
+			t.Assert(len(one), 6)
 			return err
 		})
 		t.AssertNil(err)
@@ -1085,7 +1124,7 @@ func Test_Issue2552_ClearTableFields(t *testing.T) {
 		ctx = context.Background()
 		sqlArray, err = gdb.CatchSQL(ctx, func(ctx context.Context) error {
 			one, err := db.Model(table).Ctx(ctx).One()
-			t.Assert(len(one), 4)
+			t.Assert(len(one), 5)
 			return err
 		})
 		t.AssertNil(err)
@@ -1093,7 +1132,7 @@ func Test_Issue2552_ClearTableFields(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/2643
+// https://github.com/gogf/gf/issues/2643
 func Test_Issue2643(t *testing.T) {
 	table := "issue2643"
 	array := gstr.SplitAndTrim(gtest.DataContent(`issue2643.sql`), ";")
@@ -1127,7 +1166,7 @@ func Test_Issue2643(t *testing.T) {
 	})
 }
 
-// https://github.com/joy12825/gf/issues/3238
+// https://github.com/gogf/gf/issues/3238
 func Test_Issue3238(t *testing.T) {
 	table := createInitTable()
 	defer dropTable(table)
@@ -1158,5 +1197,151 @@ func Test_Issue3238(t *testing.T) {
 			).All()
 			t.AssertNil(err)
 		}
+	})
+}
+
+// https://github.com/gogf/gf/issues/3649
+func Test_Issue3649(t *testing.T) {
+	table := createInitTable()
+	defer dropTable(table)
+
+	gtest.C(t, func(t *gtest.T) {
+		sql, err := gdb.CatchSQL(context.Background(), func(ctx context.Context) (err error) {
+			user := db.Model(table).Ctx(ctx)
+			_, err = user.Where("create_time = ?", gdb.Raw("now()")).WhereLT("create_time", gdb.Raw("now()")).Count()
+			return
+		})
+		t.AssertNil(err)
+		sqlStr := fmt.Sprintf("SELECT COUNT(1) FROM `%s` WHERE (create_time = now()) AND (`create_time` < now())", table)
+		t.Assert(sql[0], sqlStr)
+	})
+}
+
+// https://github.com/gogf/gf/issues/3754
+func Test_Issue3754(t *testing.T) {
+	table := "issue3754"
+	array := gstr.SplitAndTrim(gtest.DataContent(`issue3754.sql`), ";")
+	for _, v := range array {
+		if _, err := db.Exec(ctx, v); err != nil {
+			gtest.Error(err)
+		}
+	}
+	defer dropTable(table)
+
+	gtest.C(t, func(t *gtest.T) {
+		fieldsEx := []string{"delete_at", "create_at", "update_at"}
+		// Insert.
+		dataInsert := g.Map{
+			"id":   1,
+			"name": "name_1",
+		}
+		r, err := db.Model(table).Data(dataInsert).FieldsEx(fieldsEx).Insert()
+		t.AssertNil(err)
+		n, _ := r.RowsAffected()
+		t.Assert(n, 1)
+
+		oneInsert, err := db.Model(table).WherePri(1).One()
+		t.AssertNil(err)
+		t.Assert(oneInsert["id"].Int(), 1)
+		t.Assert(oneInsert["name"].String(), "name_1")
+		t.Assert(oneInsert["delete_at"].String(), "")
+		t.Assert(oneInsert["create_at"].String(), "")
+		t.Assert(oneInsert["update_at"].String(), "")
+
+		// Update.
+		dataUpdate := g.Map{
+			"name": "name_1000",
+		}
+		r, err = db.Model(table).Data(dataUpdate).FieldsEx(fieldsEx).WherePri(1).Update()
+		t.AssertNil(err)
+		n, _ = r.RowsAffected()
+		t.Assert(n, 1)
+
+		oneUpdate, err := db.Model(table).WherePri(1).One()
+		t.AssertNil(err)
+		t.Assert(oneUpdate["id"].Int(), 1)
+		t.Assert(oneUpdate["name"].String(), "name_1000")
+		t.Assert(oneUpdate["delete_at"].String(), "")
+		t.Assert(oneUpdate["create_at"].String(), "")
+		t.Assert(oneUpdate["update_at"].String(), "")
+
+		// FieldsEx does not affect Delete operation.
+		r, err = db.Model(table).FieldsEx(fieldsEx).WherePri(1).Delete()
+		n, _ = r.RowsAffected()
+		t.Assert(n, 1)
+		oneDeleteUnscoped, err := db.Model(table).Unscoped().WherePri(1).One()
+		t.AssertNil(err)
+		t.Assert(oneDeleteUnscoped["id"].Int(), 1)
+		t.Assert(oneDeleteUnscoped["name"].String(), "name_1000")
+		t.AssertNE(oneDeleteUnscoped["delete_at"].String(), "")
+		t.Assert(oneDeleteUnscoped["create_at"].String(), "")
+		t.Assert(oneDeleteUnscoped["update_at"].String(), "")
+	})
+}
+
+// https://github.com/gogf/gf/issues/3626
+func Test_Issue3626(t *testing.T) {
+	table := "issue3626"
+	array := gstr.SplitAndTrim(gtest.DataContent(`issue3626.sql`), ";")
+	for _, v := range array {
+		if _, err := db.Exec(ctx, v); err != nil {
+			gtest.Error(err)
+		}
+	}
+	defer dropTable(table)
+
+	// Insert.
+	gtest.C(t, func(t *gtest.T) {
+		dataInsert := g.Map{
+			"id":   1,
+			"name": "name_1",
+		}
+		r, err := db.Model(table).Data(dataInsert).Insert()
+		t.AssertNil(err)
+		n, _ := r.RowsAffected()
+		t.Assert(n, 1)
+
+		oneInsert, err := db.Model(table).WherePri(1).One()
+		t.AssertNil(err)
+		t.Assert(oneInsert["id"].Int(), 1)
+		t.Assert(oneInsert["name"].String(), "name_1")
+	})
+
+	var (
+		cacheKey  = guid.S()
+		cacheFunc = func(duration time.Duration) gdb.HookHandler {
+			return gdb.HookHandler{
+				Select: func(ctx context.Context, in *gdb.HookSelectInput) (result gdb.Result, err error) {
+					get, err := db.GetCache().Get(ctx, cacheKey)
+					if err == nil && !get.IsEmpty() {
+						err = get.Scan(&result)
+						if err == nil {
+							return result, nil
+						}
+					}
+					result, err = in.Next(ctx)
+					if err != nil {
+						return nil, err
+					}
+					if result == nil || result.Len() < 1 {
+						result = make(gdb.Result, 0)
+					}
+					_ = db.GetCache().Set(ctx, cacheKey, result, duration)
+					return
+				},
+			}
+		}
+	)
+	gtest.C(t, func(t *gtest.T) {
+		defer db.GetCache().Clear(ctx)
+		count, err := db.Model(table).Count()
+		t.AssertNil(err)
+		t.Assert(count, 1)
+		count, err = db.Model(table).Hook(cacheFunc(time.Hour)).Count()
+		t.AssertNil(err)
+		t.Assert(count, 1)
+		count, err = db.Model(table).Hook(cacheFunc(time.Hour)).Count()
+		t.AssertNil(err)
+		t.Assert(count, 1)
 	})
 }

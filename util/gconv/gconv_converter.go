@@ -11,6 +11,7 @@ import (
 
 	"github.com/joy12825/gf/v2/errors/gcode"
 	"github.com/joy12825/gf/v2/errors/gerror"
+	"github.com/joy12825/gf/v2/util/gconv/internal/structcache"
 )
 
 type (
@@ -82,6 +83,7 @@ func RegisterConverter(fn interface{}) (err error) {
 		return
 	}
 	registeredOutTypeMap[outType] = reflect.ValueOf(fn)
+	structcache.RegisterCustomConvertType(outType)
 	return
 }
 

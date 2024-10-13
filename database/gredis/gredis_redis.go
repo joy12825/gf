@@ -12,7 +12,6 @@ import (
 	"github.com/joy12825/gf/v2/container/gvar"
 	"github.com/joy12825/gf/v2/errors/gcode"
 	"github.com/joy12825/gf/v2/errors/gerror"
-	"github.com/joy12825/gf/v2/text/gstr"
 )
 
 // Redis client.
@@ -48,12 +47,7 @@ const (
 	errorNilRedis = `the Redis object is nil`
 )
 
-var (
-	errorNilAdapter = gstr.Trim(gstr.Replace(`
-redis adapter is not set, missing configuration or adapter register? 
-possible reference: https://github.com/joy12825/gf/tree/master/contrib/nosql/redis
-`, "\n", ""))
-)
+const errorNilAdapter = `redis adapter is not set, missing configuration or adapter register? possible reference: https://github.com/gogf/gf/tree/master/contrib/nosql/redis`
 
 // initGroup initializes the group object of redis.
 func (r *Redis) initGroup() *Redis {

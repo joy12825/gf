@@ -2,7 +2,7 @@
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/joy12825/gf.
+// You can obtain one at https://github.com/gogf/gf.
 
 package genservice
 
@@ -11,13 +11,14 @@ import (
 	"go/parser"
 	"go/token"
 
-	"github.com/joy12825/gf/v2/os/gfile"
+	"github.com/gogf/gf/v2/os/gfile"
+	"github.com/gogf/gf/v2/text/gstr"
 )
 
 type pkgItem struct {
 	Alias     string `eg:"gdbas"`
-	Path      string `eg:"github.com/joy12825/gf/v2/database/gdb"`
-	RawImport string `eg:"gdbas github.com/joy12825/gf/v2/database/gdb"`
+	Path      string `eg:"github.com/gogf/gf/v2/database/gdb"`
+	RawImport string `eg:"gdbas github.com/gogf/gf/v2/database/gdb"`
 }
 
 type funcItem struct {
@@ -78,17 +79,51 @@ func (c CGenService) parseImportPackages(node *ast.ImportSpec) (packages pkgItem
 		path      = node.Path.Value
 		rawImport string
 	)
+
 	if node.Name != nil {
 		alias = node.Name.Name
-		rawImport = alias + " " + path
+		rawImport = node.Name.Name + " " + path
 	} else {
 		rawImport = path
 	}
+
+	// if the alias is empty, it will further retrieve the real alias.
+	if alias == "" {
+		alias = c.getRealAlias(path)
+	}
+
 	return pkgItem{
 		Alias:     alias,
 		Path:      path,
 		RawImport: rawImport,
 	}
+}
+
+// getRealAlias retrieves the real alias of the package.
+// If package is "github.com/gogf/gf", the alias is "gf".
+// If package is "github.com/gogf/gf/v2", the alias is "gf" instead of "v2".
+func (c CGenService) getRealAlias(importPath string) (pkgName string) {
+	importPath = gstr.Trim(importPath, `"`)
+	parts := gstr.Split(importPath, "/")
+	if len(parts) == 0 {
+		return
+	}
+
+	pkgName = parts[len(parts)-1]
+
+	if !gstr.HasPrefix(pkgName, "v") {
+		return pkgName
+	}
+
+	if len(parts) < 2 {
+		return pkgName
+	}
+
+	if gstr.IsNumeric(gstr.SubStr(pkgName, 1)) {
+		pkgName = parts[len(parts)-2]
+	}
+
+	return pkgName
 }
 
 // parseFuncReceiverTypeName retrieves the receiver type of the function.

@@ -55,8 +55,12 @@ func (r *Registry) Watch(ctx context.Context, key string) (watcher gsvc.Watcher,
 		prefix:    key,
 		discovery: r,
 		ch:        make(chan gsvc.Service, 100),
+		closed:    gtype.NewBool(false),
 	}
 	_, err = gfsnotify.Add(r.path, func(event *gfsnotify.Event) {
+		if fileWatcher.closed.Val() {
+			return
+		}
 		if event.IsChmod() {
 			return
 		}
