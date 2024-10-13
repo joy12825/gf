@@ -7,8 +7,6 @@
 package gcache
 
 import (
-	"context"
-
 	"github.com/joy12825/gf/v2/container/glist"
 	"github.com/joy12825/gf/v2/container/gmap"
 	"sync"
